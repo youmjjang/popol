@@ -3,199 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#eef7fc">
-<meta name="description" content="김유미의 AI·웹 서비스 개발 포트폴리오. GIGANG, 쉬엄쉬엄, 오늘의짐의 문제 해결과 구현 과정을 소개합니다.">
-<meta property="og:title" content="김유미 | Development Portfolio 2026">
-<meta property="og:description" content="데이터를 연결하고, 근거를 확인하고, 동작하는 서비스로 구현합니다.">
-<title>김유미 | Development Portfolio · 2026</title>
+<meta name="theme-color" content="#f8fcff">
+<meta name="description" content="김유미의 개발 포트폴리오 — AI 기반 보안 관제, 위치 기반 웹 서비스, 공공데이터 활용 프로젝트의 실제 구현 과정">
+<meta property="og:title" content="김유미 | Developer Portfolio">
+<meta property="og:description" content="데이터의 흐름을 파악하고, 문제를 분석하고, 동작하는 서비스로 연결합니다.">
+<title>김유미 | Developer Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
-<script defer src="./script.js"></script>
+<script src="./script.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#page-1">포트폴리오 본문으로 이동</a>
-<div class="toolbar">
-  <div class="toolbar-inner">
-    <a class="wordmark" href="#page-1" aria-label="첫 장으로 이동"><span class="wordmark-symbol">y<span>.</span></span><span>YUMI KIM</span><span class="wordmark-suffix">/ PORTFOLIO</span></a>
-    <div class="toolbar-actions"><span class="toolbar-count"><b id="currentPage">01</b> / 12</span>
-      <button type="button" class="icon-btn" id="prevPage" aria-label="이전 장">←</button>
-      <button type="button" class="icon-btn" id="nextPage" aria-label="다음 장">→</button>
-      <button type="button" class="print-btn" id="printButton">PDF로 저장 / 인쇄 ↗</button>
-    </div>
-  </div>
-</div>
-<main class="deck" id="deck">
-<section class="sheet cover" id="page-1" aria-label="표지">
- <div class="sheet-top"><span>DEVELOPMENT PORTFOLIO</span><span>2026 / APPLICATION EDITION</span></div>
- <div class="cover-main">
-   <div class="eyebrow"><span class="eyebrow-mark"></span> BUILD · ANALYZE · IMPROVE</div>
-   <h1>문제를 구조화하고,<br><span class="accent">동작하는 결과</span>로<br>연결합니다<span class="dot">.</span></h1>
-   <p class="cover-desc">데이터의 흐름을 이해하고, 실패하는 지점을 확인하고,<br>직접 구현과 검증을 반복하는 개발자 김유미입니다.</p>
-   <div class="cover-meta"><div><small>FOCUS</small><strong>AI · WEB SERVICE · DATA FLOW</strong></div><div><small>SELECTED WORK</small><strong>GIGANG · 쉬엄쉬엄 · 오늘의짐</strong></div></div>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="site-header" id="top">
+ <div class="container header-inner">
+  <a class="brand" href="#top" aria-label="홈으로 이동"><span class="brand-mark">y<span>.</span></span><span>youmjjang<span class="brand-soft">.dev</span></span></a>
+  <nav class="nav" id="nav" aria-label="메뉴"><a href="#about">About</a><a href="#projects">Projects</a><a href="#process">How I Work</a><a href="#contact">Contact</a><a class="nav-doc" href="./print.html">PDF용 보기 <span aria-hidden="true">↗</span></a></nav>
+  <div class="nav-end"><a href="https://github.com/youmjjang" class="header-git" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="메뉴 열기"><span></span><span></span><span></span></button></div>
  </div>
- <div class="cover-graphic" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="graphic-card gc-1"><span>01 / COLLECT</span><b>INPUT</b><i></i></div><div class="graphic-card gc-2"><span>02 / REASON</span><b>LOGIC</b><i></i></div><div class="graphic-card gc-3"><span>03 / VERIFY</span><b>OUTPUT</b><i></i></div></div>
- <div class="sheet-bottom"><span>김유미 · COMPUTER SOFTWARE ENGINEERING</span><span>01 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-2" aria-label="소개 및 기술 경험">
- <div class="sheet-top"><span>01 / PROFILE</span><span>ABOUT &amp; WORKING STYLE</span></div>
- <div class="page-main">
-  <div class="section-head"><span class="kicker">ABOUT ME</span><h2>왜 그런지 확인하고,<br>작동할 때까지 개선합니다.</h2><p>컴퓨터소프트웨어공학 전공을 바탕으로 웹 서비스와 보안 관제 프로젝트를 진행했습니다. 기능의 개수보다 데이터가 어디서 들어와 어떻게 처리되고 어떤 결과로 이어지는지 설명할 수 있는 구현을 중요하게 생각합니다.</p></div>
-  <div class="profile-columns">
-   <div class="profile-principles">
-    <div class="principle"><span>01</span><div><b>주체성</b><p>설명을 그대로 받아들이기보다 결과와 원인을 직접 확인합니다.</p></div></div>
-    <div class="principle"><span>02</span><div><b>실행력</b><p>작게 구현해 확인한 뒤 필요한 부분을 빠르게 보완합니다.</p></div></div>
-    <div class="principle"><span>03</span><div><b>탐구심</b><p>오류가 발생한 위치와 데이터 흐름을 따라가며 해결책을 찾습니다.</p></div></div>
+</header>
+<main id="main">
+ <section class="hero section" aria-labelledby="hero-heading">
+  <div class="container hero-inner">
+   <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> DEVELOPMENT PORTFOLIO <span class="eyebrow-rule"></span> 2026</div>
+    <h1 id="hero-heading">데이터를 연결하고,<br><span>문제를 분석하고,</span><br>동작하는 결과로<span class="hero-period">.</span></h1>
+    <p class="hero-description">안녕하세요, 김유미입니다.<br>데이터가 들어오는 지점부터 화면에 결과가 나타나는 순간까지,<br>직접 확인하며 구현과 개선을 반복합니다.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#about">개발 방식 알아보기 <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-line">COMPUTER SOFTWARE ENGINEERING <span></span> AI · WEB · DATA</div>
    </div>
-   <div class="skill-card"><div class="label-small">PROJECT-BASED EXPERIENCE</div>
-    <div class="skill-line"><span>LANGUAGE / UI</span><b>Python · JavaScript · HTML/CSS · React</b></div>
-    <div class="skill-line"><span>SERVER / API</span><b>FastAPI · Node.js · REST API 연동</b></div>
-    <div class="skill-line"><span>OPERATIONS / COLLAB</span><b>Git · GitHub · Docker · Railway · Vercel</b></div>
-    <div class="skill-line"><span>AI / DATA</span><b>Gemini 연동 · 데이터 정규화 · 규칙 기반 위험도 분석</b></div>
-    <p class="skill-note">위 기술은 프로젝트에서 접한 기술을 중심으로 적었습니다. Java/Spring 백엔드 실무 경험을 보유한 것처럼 표시하지 않았습니다.</p>
+   <div class="hero-board" aria-label="데이터 입력부터 분석과 화면 출력까지 연결하는 흐름도">
+    <div class="board-top"><span class="board-dots"><i></i><i></i><i></i></span><span>HOW I BUILD</span><span>01 — 04</span></div>
+    <div class="board-heading"><small>DEVELOPMENT FLOW</small><strong>From signal<br>to <em>solution.</em></strong><p>서로 다른 정보를 하나의 흐름으로.</p></div>
+    <div class="board-flow"><div><span>01</span><b>Collect</b><small>수집</small></div><i>→</i><div><span>02</span><b>Analyze</b><small>분석</small></div><i>→</i><div><span>03</span><b>Build</b><small>구현</small></div><i>→</i><div><span>04</span><b>Verify</b><small>검증</small></div></div>
+    <div class="board-bottom"><span><i></i> ERROR HANDLING</span><span><i></i> EVIDENCE FIRST</span></div>
    </div>
   </div>
- </div>
- <div class="sheet-bottom"><span>문제 정의 → 구현 → 테스트 → 개선</span><span>02 / 12</span></div>
-</section>
+ </section>
 
-<section class="sheet" id="page-3" aria-label="프로젝트 목차">
- <div class="sheet-top"><span>02 / SELECTED PROJECTS</span><span>THREE CASE STUDIES</span></div>
- <div class="page-main"><div class="section-head compact"><span class="kicker">PROJECT INDEX</span><h2>서로 다른 문제를 풀었던<br>세 가지 개발 경험.</h2></div>
-  <div class="index-list">
-   <a class="index-project" href="#page-4"><div class="index-no">01</div><div class="index-copy"><small>SECURITY ANALYTICS · TEAM</small><h3>GIGANG <span>기강</span></h3><p>브라우저·DB·단말 이벤트를 연결하고 근거 기반 위험도를 판단하는 보안 관제 프로젝트</p><div class="chips"><span>Python</span><span>FastAPI</span><span>Gemini</span></div></div><div class="index-image"><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-overview-hd.png" alt="기강 종합 관제 대시보드" loading="lazy"></div></a>
-   <a class="index-project" href="#page-8"><div class="index-no">02</div><div class="index-copy"><small>WEB SERVICE · LOCATION</small><h3>쉬엄쉬엄</h3><p>위치 기반 휴식공간 후보 탐색과 보행 경로를 하나의 화면에 연결한 웹 서비스</p><div class="chips"><span>JavaScript</span><span>OSM / Overpass</span><span>TMAP</span></div></div><div class="index-image phone-crop"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 모바일 검색 화면" loading="lazy"></div></a>
-   <a class="index-project" href="#page-10"><div class="index-no">03</div><div class="index-copy"><small>PUBLIC DATA · TEAM</small><h3>오늘의짐</h3><p>물품보관함의 위치뿐 아니라 짐을 되찾는 동선까지 고려하는 보관함 추천 서비스</p><div class="chips"><span>React</span><span>Public Data</span><span>Web Crypto</span></div></div><div class="index-image"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 물품보관함 추천 결과 화면" loading="lazy"></div></a>
-  </div>
- </div>
- <div class="sheet-bottom"><span>기능 나열보다 구현 과정과 검증 근거를 중심으로 정리했습니다.</span><span>03 / 12</span></div>
-</section>
-
-<section class="sheet project-hero" id="page-4" aria-label="기강 프로젝트 개요">
- <div class="sheet-top"><span>PROJECT 01 / GIGANG</span><span>SECURITY ANALYTICS · TEAM PROJECT</span></div>
- <div class="page-main">
-   <div class="project-title-row"><div><span class="kicker">GIGANG / 기강</span><h2>따로 기록된 로그를<br><em>하나의 사건 맥락</em>으로.</h2><p>브라우저의 AI 서비스 접근, 자료 열람, 파일·클립보드 동작 등이 서로 다른 경로로 기록되면 위험 행동의 전후 관계가 보이지 않습니다. 이벤트를 연결하고 증거에 따라 판단하도록 구성했습니다.</p></div><div class="project-pill">AI × SECURITY<br><b>EVENT CORRELATION</b></div></div>
-   <figure class="feature-shot"><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-overview-hd.png" alt="GIGANG 종합 관제 실제 화면" loading="lazy"><figcaption>실제 프로젝트 종합 관제 화면 · 테스트 환경</figcaption></figure>
-   <div class="facts-row"><div><span>형태</span><b>팀 프로젝트</b></div><div><span>핵심 기능</span><b>이벤트 수집 · 위험도 판단 · 관제</b></div><div><span>사용 기술</span><b>Python · FastAPI · Railway · Gemini</b></div></div>
- </div>
- <div class="sheet-bottom"><span>PROJECT 01 — GIGANG</span><span>04 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-5" aria-label="기강 데이터 처리 구조">
- <div class="sheet-top"><span>PROJECT 01 / IMPLEMENTATION</span><span>DATA FLOW &amp; ARCHITECTURE</span></div>
- <div class="page-main">
-  <div class="section-head compact"><span class="kicker">SYSTEM FLOW</span><h2>수집부터 관제까지 이어지는 흐름.</h2><p>형식이 다른 이벤트를 서버에서 연결할 수 있도록 수집 경로와 처리 단계를 분리했습니다.</p></div>
-  <div class="pipeline-grid">
-   <div class="pipe-step"><span class="step-num">01 / INPUT</span><div class="pipe-icon">↙ ↘</div><b>이벤트 수집</b><p>브라우저 확장<br>DB 감사 로그<br>로컬 에이전트</p></div>
-   <div class="pipe-arrow">→</div>
-   <div class="pipe-step"><span class="step-num">02 / NORMALIZE</span><div class="pipe-icon">≡</div><b>정규화·중복 처리</b><p>서로 다른 로그 형식 정리<br>필드·전달 경로 확인</p></div>
-   <div class="pipe-arrow">→</div>
-   <div class="pipe-step"><span class="step-num">03 / ANALYZE</span><div class="pipe-icon">◇</div><b>상관분석·판정</b><p>자료 연관성 확인<br>규칙 점수·증거 평가</p></div>
-   <div class="pipe-arrow">→</div>
-   <div class="pipe-step"><span class="step-num">04 / RESPOND</span><div class="pipe-icon">◎</div><b>관제·대응</b><p>사건/상태 표시<br>알림과 정책 흐름</p></div>
-  </div>
-  <div class="two-col bottom-spacing"><div class="detail-card"><span class="detail-index">PROBLEM</span><h3>형식이 다른 로그의 연결</h3><p>브라우저, DB, 단말에서 온 이벤트는 각각 기록 방식과 전달 경로가 달라 누락이나 중복 처리 가능성이 있었습니다.</p></div><div class="detail-card focus"><span class="detail-index">IMPLEMENTATION</span><h3>공통 처리 흐름을 점검</h3><p>이벤트 필드를 맞추고 수집기·서버·분석 엔진 사이의 연동 경로를 확인했습니다. 수신 실패 및 전달 누락 구간을 보완해 맥락 기반 분석이 가능하도록 연결했습니다.</p></div></div>
-  <div class="tech-strip"><b>PROJECT STACK</b><span>Python / FastAPI</span><span>Railway</span><span>Chrome Extension</span><span>Gemini 보조 분석</span><span>Slack 알림 흐름</span></div>
- </div>
- <div class="sheet-bottom"><span>수집 경로와 판단 로직을 분리해 문제 지점을 찾았습니다.</span><span>05 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-6" aria-label="기강 위험도 판단">
- <div class="sheet-top"><span>PROJECT 01 / RISK SCORING</span><span>EVIDENCE BEFORE LABELS</span></div>
- <div class="page-main">
- <div class="section-head compact"><span class="kicker">EXPLAINABLE DECISION</span><h2>점수만 높다고 HIGH가 되지는 않습니다.</h2><p>위험 수준을 표현할 때 ‘몇 점인가’와 ‘어떤 강한 근거가 확인됐는가’를 함께 판단하도록 설계한 점이 핵심입니다.</p></div>
- <div class="score-layout">
-  <div class="score-card"><div class="score-title">판정 예시 A <span>강한 근거 있음</span></div>
-   <div class="score-item"><span>기본 이벤트</span><b>25</b></div><div class="score-item"><span>외부 목적지</span><b>+ 10</b></div><div class="score-item"><span>내용 일치 근거</span><b>+ 30</b></div>
-   <div class="score-total"><div><small>TOTAL</small><strong>65</strong></div><span class="state-high">HIGH 가능</span></div>
-   <p>내용 일치처럼 신뢰도 높은 증거가 확인되었기 때문에 HIGH 판정 조건을 충족하는 예시입니다.</p>
-  </div>
-  <div class="score-card score-card-soft"><div class="score-title">판정 예시 B <span>강한 근거 없음</span></div>
-   <div class="score-large"><b>74</b><span>POINTS</span></div><div class="state-callout">점수가 74점이어도<br><strong>근거 조건이 없다면 점수만으로 HIGH 판정하지 않음</strong></div>
-   <p>탐지 기준을 숫자 하나로 단순화하지 않고, 오탐 가능성과 증거의 신뢰도를 함께 고려합니다.</p>
-  </div>
- </div>
- <div class="evidence-row"><div><small>RULES</small><b>규칙 기반 점수 계산</b></div><div><small>CONTEXT</small><b>자료 연관성·민감도</b></div><div><small>EXPLAIN</small><b>판정 근거 기록</b></div></div>
- <p class="footnote">* 위 점수는 발표용 판정 구조를 설명하는 예시이며, 실제 운영 환경의 탐지 성능이나 고정된 모든 규칙을 뜻하지 않습니다.</p>
- </div>
- <div class="sheet-bottom"><span>신뢰 가능한 근거가 위험 수준의 판단을 뒷받침하도록 구성했습니다.</span><span>06 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-7" aria-label="기강 문제 해결과 결과">
- <div class="sheet-top"><span>PROJECT 01 / VALIDATION</span><span>PROBLEM → ACTION → RESULT</span></div>
- <div class="page-main">
-  <div class="section-head compact"><span class="kicker">WHAT CHANGED</span><h2>보이는 화면보다, 이어지는 동작을 검증했습니다.</h2></div>
-  <div class="validation-grid">
-   <div class="validation-copy">
-    <div class="case-mini"><span>01 / 원인</span><h3>목업 화면만으로는 실제 이벤트 흐름을 확인할 수 없었습니다.</h3><p>데이터가 수집됐는지, 위험도 엔진에서 처리됐는지, 대시보드와 알림이 갱신되는지를 별도로 확인해야 했습니다.</p></div>
-    <div class="case-mini"><span>02 / 조치</span><h3>로컬 수집기와 서버 응답을 따라가며 연동을 수정했습니다.</h3><p>전달 형식과 누락 수신 경로를 점검하고 실제 이벤트를 발생시켜 관제 상태의 변화를 확인했습니다.</p></div>
-    <div class="case-mini"><span>03 / 결과</span><h3>수집·판정·표시가 연결되는 테스트 흐름을 확인했습니다.</h3><p>관제 화면의 사건 목록, 심각도 구분과 로그 파이프라인을 시험 데이터로 검증했습니다.</p></div>
+ <section class="about section" id="about" aria-labelledby="about-heading">
+  <div class="container">
+   <div class="section-label"><span>01</span> ABOUT ME</div>
+   <div class="about-grid">
+    <div class="about-lead"><h2 id="about-heading">왜 그런지 묻고,<br><em>직접 확인하는 개발.</em></h2><p>컴퓨터소프트웨어공학을 전공하며 웹 서비스와 보안 관제 프로젝트를 경험했습니다. 구현한 기능이 어디에서 데이터를 받고 어떤 조건에서 실패할 수 있는지 이해하는 데 집중했습니다.</p><p>특히 API 연동, 데이터 정규화, 오류 원인 분석처럼 서비스가 정상적으로 이어지기 위한 과정을 좋아합니다.</p></div>
+    <div class="about-values"><div class="value"><span class="value-number">01</span><div><h3>주체성</h3><p>결과를 그대로 받아들이지 않고 동작과 근거를 직접 확인합니다.</p></div></div><div class="value"><span class="value-number">02</span><div><h3>실행력</h3><p>작게 만들고 테스트한 뒤 필요한 부분을 빠르게 보완합니다.</p></div></div><div class="value"><span class="value-number">03</span><div><h3>탐구심</h3><p>문제가 생기면 전달 경로와 조건을 살피며 원인을 찾습니다.</p></div></div></div>
    </div>
-   <div class="validation-shots"><figure><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-pipeline-hd.png" alt="기강 로그 파이프라인 화면" loading="lazy"><figcaption>실제 로그 파이프라인 화면</figcaption></figure><figure><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-incidents-hd.png" alt="기강 인시던트 목록 화면" loading="lazy"><figcaption>분류된 인시던트 목록</figcaption></figure></div>
+   <div class="stack-panel"><div class="stack-title"><span>EXPERIENCE</span><h3>프로젝트에서 사용한 기술</h3><p>숙련도를 과장하지 않고 실제 프로젝트 맥락을 기준으로 정리했습니다.</p></div><div class="stack-groups"><div><small>LANGUAGE / FRONTEND</small><p>Python · JavaScript · HTML/CSS · React</p></div><div><small>API / BACKEND</small><p>FastAPI · Node.js · REST API 연동</p></div><div><small>WORKFLOW / DATA</small><p>Git · GitHub · Docker · Railway · Vercel · Gemini 연동</p></div></div></div>
   </div>
-  <div class="ownership-strip"><strong>참여 범위</strong><span>팀원들과 구현 · 수집/DB 연동, 판단 흐름 점검 및 단말 대응 연결 중심</span><a href="https://github.com/youmjjang/youmjjang-lab/blob/main/gigang.html" target="_blank" rel="noopener noreferrer">프로젝트 설명 ↗</a></div>
- </div>
- <div class="sheet-bottom"><span>캡처 속 수치는 테스트 당시 화면 상태입니다.</span><span>07 / 12</span></div>
-</section>
+ </section>
 
-<section class="sheet" id="page-8" aria-label="쉬엄쉬엄 프로젝트 개요">
- <div class="sheet-top"><span>PROJECT 02 / 쉬엄쉬엄</span><span>LOCATION WEB SERVICE</span></div>
- <div class="page-main">
-  <div class="project-title-row"><div><span class="kicker">쉬엄쉬엄 / REST SPOT FINDER</span><h2>지금 주변에서<br><em>쉬어갈 장소</em>를 찾는 웹.</h2><p>낯선 장소에서 벤치·쉼터·공원을 찾으려면 여러 검색을 반복해야 합니다. 현재 위치나 검색한 장소를 기준으로 휴식공간 후보와 보행 경로를 함께 제공하는 서비스를 구현했습니다.</p></div><div class="project-pill">LOCATION × WEB<br><b>REAL-WORLD DATA</b></div></div>
-  <div class="phone-showcase"><figure><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 휴식 공간 검색 결과" loading="lazy"><figcaption>휴식공간 후보 리스트</figcaption></figure><div class="phone-middle"><div class="feature-point"><span>01</span><b>위치 설정</b><p>GPS 또는 장소명 검색</p></div><div class="feature-point"><span>02</span><b>후보 검색</b><p>공원·벤치·쉼터 데이터 결합</p></div><div class="feature-point"><span>03</span><b>경로 확인</b><p>선택한 장소까지의 보행 경로</p></div></div><figure><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" alt="쉬엄쉬엄 휴식 공간 보행 경로" loading="lazy"><figcaption>장소 선택과 경로 안내</figcaption></figure></div>
-  <div class="facts-row"><div><span>방식</span><b>반응형 웹 서비스</b></div><div><span>주요 기술</span><b>JavaScript · Node.js</b></div><div><span>연동</span><b>OpenStreetMap · Overpass · TMAP</b></div></div>
- </div>
- <div class="sheet-bottom"><span>LIVE SERVICE — swieogalgot.vercel.app</span><span>08 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-9" aria-label="쉬엄쉬엄 문제 해결">
- <div class="sheet-top"><span>PROJECT 02 / PROBLEM SOLVING</span><span>DATA SOURCES &amp; API RELIABILITY</span></div>
- <div class="page-main">
- <div class="section-head compact"><span class="kicker">WHY IT WORKS THIS WAY</span><h2>API가 불안정해도, 실패 이유는 숨기지 않도록.</h2></div>
- <div class="triple-cards">
-  <article class="triple"><span>CASE 01 / DATA</span><h3>한 종류의 지도 데이터로는 후보가 부족했습니다.</h3><div class="case-rule"></div><p><b>해결</b> OSM·Overpass의 착석시설/공원 후보와 TMAP 공원 검색을 결합하고, 필요 시 검색 반경을 확장했습니다.</p><div class="case-result">→ 서로 다른 장소 유형을 한 목록에서 비교</div></article>
-  <article class="triple"><span>CASE 02 / ROUTING</span><h3>가까운 장소가 곧 빠른 보행 경로는 아니었습니다.</h3><div class="case-rule"></div><p><b>해결</b> TMAP 보행 경로를 요청하고, 경로 요청 실패 시 직선거리를 보행 거리인 것처럼 대체하지 않았습니다.</p><div class="case-result">→ 확인된 경로와 미확인 경로를 분리</div></article>
-  <article class="triple"><span>CASE 03 / SERVER</span><h3>외부 API 오류와 브라우저 CORS 제한이 있었습니다.</h3><div class="case-rule"></div><p><b>해결</b> Node.js 서버에서 요청을 중계하고, 허용 서버 순차 시도·캐시·중복 요청 합치기를 적용했습니다.</p><div class="case-result">→ 실패 상태를 명확하게 표시</div></article>
- </div>
- <div class="flow-banner"><span>CLIENT</span><strong>위치 선택 · 결과 화면</strong><i>⇄</i><span>NODE SERVER</span><strong>API 중계 · 요청 정리</strong><i>⇄</i><span>EXTERNAL</span><strong>Overpass / TMAP</strong></div>
- <div class="limitations"><b>데이터 한계</b><p>지도에 장소가 표시되더라도 실제 빈자리·무료 이용·개방 상태가 보장되는 것은 아닙니다. 외부 API 키와 접속 상태에 따라 일부 기능이 제한될 수 있습니다.</p><a href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 ↗</a><a href="https://github.com/youmjjang/swieogalgot" target="_blank" rel="noopener noreferrer">코드 ↗</a></div>
- </div>
- <div class="sheet-bottom"><span>데이터가 보장하는 정보만 사용자에게 전달하도록 설계했습니다.</span><span>09 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-10" aria-label="오늘의짐 프로젝트 개요">
- <div class="sheet-top"><span>PROJECT 03 / 오늘의짐</span><span>PUBLIC DATA · TEAM PROJECT</span></div>
- <div class="page-main">
-  <div class="project-title-row"><div><span class="kicker">오늘의짐 / LOCKER ROUTE SERVICE</span><h2>가장 가까운 곳보다,<br><em>다시 찾기 편한 곳</em>을.</h2><p>짐을 맡길 때의 거리만 고려하면 일정을 마친 뒤 되찾으러 돌아가는 부담이 커질 수 있습니다. 전체 이동 동선과 역별 보관함 정보를 함께 비교하는 서비스를 구현했습니다.</p></div><div class="project-pill">PUBLIC DATA × UX<br><b>ROUTE PLANNING</b></div></div>
-  <figure class="feature-shot jim-shot"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 물품보관함 추천 실제 화면" loading="lazy"><figcaption>오늘의짐 보관함 비교 결과 화면</figcaption></figure>
-  <div class="facts-row"><div><span>형태</span><b>팀 프로젝트</b></div><div><span>기술</span><b>React · JavaScript · Node.js</b></div><div><span>특징</span><b>동선 계산 · 공공데이터 · Web Crypto API</b></div></div>
- </div>
- <div class="sheet-bottom"><span>LIVE SERVICE — oneurui-jim.vercel.app</span><span>10 / 12</span></div>
-</section>
-
-<section class="sheet" id="page-11" aria-label="오늘의짐 구현과 한계">
- <div class="sheet-top"><span>PROJECT 03 / CORE LOGIC</span><span>ROUTE MODEL &amp; DATA LIMITS</span></div>
- <div class="page-main"><div class="section-head compact"><span class="kicker">RETHINK THE METRIC</span><h2>출발부터 회수까지, 네 구간을 비교했습니다.</h2><p>추천 기준을 단순 현재 거리에서 하루 전체 이동 부담으로 바꿨습니다.</p></div>
-   <div class="leg-flow"><div><small>LEG 01</small><span>출발지</span><b>→</b><strong>보관소</strong><p>짐을 든 이동</p></div><div><small>LEG 02</small><span>보관소</span><b>→</b><strong>방문지</strong><p>짐 없이 이동</p></div><div><small>LEG 03</small><span>방문지</span><b>→</b><strong>보관소</strong><p>짐 회수</p></div><div><small>LEG 04</small><span>보관소</span><b>→</b><strong>최종 목적지</strong><p>짐을 든 이동</p></div></div>
-   <div class="two-col problem-duo"><div class="detail-card"><span class="detail-index">ISSUE 01 / COVERAGE</span><h3>자료 출처마다 제공 범위가 달랐습니다.</h3><p>철도·도시철도 운영기관의 시설 데이터가 서로 달라 누락된 보관함을 모두 보유한 것처럼 표시할 수 없었습니다. 출처와 제공 범위를 확인하고 실제 점유 여부는 확정하지 않도록 구분했습니다.</p></div><div class="detail-card focus"><span class="detail-index">ISSUE 02 / SECURITY</span><h3>보관함 번호와 암호의 노출 가능성</h3><p>보관 정보를 일반 메모에 저장하는 문제를 고려하여 브라우저 Web Crypto API 기반 암호화 흐름을 적용하고, 필요한 시점에 정보를 표시하도록 구성했습니다.</p></div></div>
-   <div class="limitations"><b>검증 범위</b><p>저장소의 경로 산출·역 데이터 검증 결과는 코드와 준비된 데이터에 대한 시험이며 모든 현장의 실시간 빈자리나 운영 상태를 보증하지 않습니다.</p><a href="https://oneurui-jim.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 ↗</a><a href="https://github.com/youmjjang/oneurui-jim" target="_blank" rel="noopener noreferrer">코드 ↗</a></div>
- </div>
- <div class="sheet-bottom"><span>전체 동선의 불편과 데이터의 신뢰도를 함께 고려했습니다.</span><span>11 / 12</span></div>
-</section>
-
-<section class="sheet closing" id="page-12" aria-label="정리와 프로젝트 링크">
- <div class="sheet-top"><span>03 / WHAT I BRING</span><span>CONNECT THE DOTS</span></div>
- <div class="page-main">
-  <div class="closing-grid">
-   <div class="closing-main"><span class="kicker">NEXT STEP</span><h2>처음부터 모든 답을<br>알지는 못해도,<br><em>확인하고 개선하는 방식</em>은<br>분명합니다.</h2><p>GIGANG에서는 분리된 이벤트를 분석 흐름으로 연결했고, 쉬엄쉬엄에서는 외부 데이터의 실패 조건을 다뤘으며, 오늘의짐에서는 추천 기준을 사용자 동선 전체로 확장했습니다. 세 프로젝트를 통해 기능이 동작하는 이유와 동작하지 않을 때의 원인을 설명하는 개발을 배웠습니다.</p></div>
-   <div class="closing-side"><div class="closing-mini"><span>WORK PROCESS</span><b>01. 문제 정의</b><b>02. 데이터·원인 확인</b><b>03. 구현과 연동</b><b>04. 테스트와 수정</b></div><div class="closing-mini"><span>PROJECT LINKS</span><a href="https://github.com/youmjjang/youmjjang-lab/blob/main/gigang.html" target="_blank" rel="noopener noreferrer">GIGANG / 설명 ↗</a><a href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">쉬엄쉬엄 / 서비스 ↗</a><a href="https://oneurui-jim.vercel.app/" target="_blank" rel="noopener noreferrer">오늘의짐 / 서비스 ↗</a></div></div>
+ <section class="projects section" id="projects" aria-labelledby="projects-heading">
+  <div class="container">
+   <div class="section-label"><span>02</span> SELECTED PROJECTS</div>
+   <div class="section-heading-row"><div><h2 id="projects-heading">만들어 본 것보다,<br><em>어떻게 해결했는지.</em></h2><p>기강 · 쉬엄쉬엄 · 오늘의짐. 서로 다른 문제를 기술로 풀어낸 세 프로젝트를 소개합니다.</p></div><div class="section-side">03 PROJECTS<br>REAL SCREENS &amp; IMPLEMENTATION</div></div>
+   <article class="project-card featured">
+    <div class="project-feature-copy"><div class="project-meta"><span>01 / FEATURED</span><span class="team-label">TEAM PROJECT</span></div><h3>GIGANG <span>기강</span></h3><p class="project-subtitle">기업 내부 자료 관련 행동을 연결하는 AI 보안 관제 프로젝트</p><p>브라우저의 AI 서비스 접근, DB 로그, 단말 이벤트가 따로 기록되면 위험 행동의 흐름을 놓칠 수 있습니다. 수집·정규화·상관분석·관제 과정을 연결해 단일 사건의 근거를 살펴볼 수 있게 했습니다.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>Railway</span><span>Gemini</span><span>Risk Scoring</span></div><a class="project-cta" href="#gigang">구현 과정 자세히 보기 <span>↗</span></a></div>
+    <a class="project-feature-image" href="#gigang" aria-label="기강 프로젝트 상세로"><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-overview-hd.png" alt="GIGANG 종합 관제 실제 화면" loading="lazy"><div class="image-label"><span>PROJECT PREVIEW</span><b>SECURITY OBSERVABILITY / DASHBOARD</b></div></a>
+   </article>
+   <div class="project-duo">
+    <article class="project-card small"><a class="small-image" href="#swieogalgot" aria-label="쉬엄쉬엄 프로젝트 상세로"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 모바일 휴식공간 검색 화면" loading="lazy"></a><div class="small-body"><div class="project-meta"><span>02 / WEB SERVICE</span></div><h3>쉬엄쉬엄</h3><p>현재 위치에서 벤치·공원·쉼터를 찾고, 선택한 장소까지의 보행 경로를 확인하는 웹 서비스</p><div class="tags"><span>JavaScript</span><span>Node.js</span><span>OSM / TMAP</span></div><a class="project-cta" href="#swieogalgot">구현 과정 보기 <span>↗</span></a></div></article>
+    <article class="project-card small"><a class="small-image locker-image" href="#oneurui-jim" aria-label="오늘의짐 프로젝트 상세로"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 물품보관함 추천 결과 화면" loading="lazy"></a><div class="small-body"><div class="project-meta"><span>03 / PUBLIC DATA</span><span class="team-label">TEAM PROJECT</span></div><h3>오늘의짐</h3><p>보관함까지의 단순 거리가 아닌 짐을 다시 찾는 전체 동선을 고려하는 물품보관함 추천 서비스</p><div class="tags"><span>React</span><span>Node.js</span><span>Web Crypto</span></div><a class="project-cta" href="#oneurui-jim">구현 과정 보기 <span>↗</span></a></div></article>
+   </div>
   </div>
-  <div class="end-line"><span>김유미</span><div><a href="https://github.com/youmjjang" target="_blank" rel="noopener noreferrer">github.com/youmjjang ↗</a><a href="https://blog.naver.com/youumii2595" target="_blank" rel="noopener noreferrer">TECH BLOG ↗</a></div></div>
- </div>
- <div class="sheet-bottom"><span>DEVELOPMENT PORTFOLIO · 2026</span><span>12 / 12</span></div>
-</section>
+ </section>
+
+ <section class="case-study section" id="gigang" aria-labelledby="gigang-heading">
+  <div class="container">
+   <div class="case-top"><div class="case-id">01 <span>/ GIGANG</span></div><span>SECURITY ANALYTICS · TEAM PROJECT</span></div>
+   <div class="case-intro"><div><span class="kicker">PROBLEM → DATA FLOW → VALIDATION</span><h2 id="gigang-heading">데이터를 모으는 것에서<br><em>사건을 설명하는 것까지.</em></h2></div><p>보안 이벤트가 따로 쌓이면 자료 열람과 외부 입력 시도의 관계를 파악하기 어렵습니다. 단순 경고보다 “왜 위험하다고 판단했는가”를 보여주는 흐름을 고민했습니다.</p></div>
+   <div class="flow-diagram" aria-label="이벤트 수집, 정규화, 위험도 판정, 관제 및 대응 순서"><div><span>01 / COLLECT</span><b>브라우저·DB·단말</b><small>이벤트 수집</small></div><i>→</i><div><span>02 / NORMALIZE</span><b>공통 데이터 형식</b><small>누락·중복 점검</small></div><i>→</i><div><span>03 / ANALYZE</span><b>위험도·증거 판단</b><small>자료 연관성 확인</small></div><i>→</i><div><span>04 / RESPOND</span><b>대시보드·알림</b><small>정책·상태 표시</small></div></div>
+   <div class="case-split"><div class="explain-list"><div class="explain-item"><span>ISSUE 01 / DATA INTEGRATION</span><h3>수집 경로마다 이벤트 형태가 달랐습니다.</h3><p>브라우저 확장, DB 감사 로그, 로컬 에이전트의 이벤트를 서버에서 연결해야 했습니다. 수신 필드와 전달 경로를 확인하고 누락·중복이 발생할 수 있는 지점을 보완했습니다.</p></div><div class="explain-item"><span>ISSUE 02 / RISK LOGIC</span><h3>높은 점수 하나가 충분한 근거는 아닙니다.</h3><p>규칙 기반 점수뿐 아니라 원본 자료와의 내용 일치 같은 신뢰도 높은 증거를 함께 고려했습니다. 사건별 판정 근거를 남기는 방향으로 위험도 흐름을 정리했습니다.</p></div><div class="example-note"><span>판정 구조 예시</span><div><b>25 + 10 + 30 = 65</b><span>내용 일치 근거 확인 → HIGH 조건 충족 가능</span></div><div><b>74점이어도</b><span>강한 근거가 없으면 점수만으로 HIGH 판정하지 않음</span></div><small>설명용 예시이며 실제 운영 탐지 성능 수치가 아닙니다.</small></div></div>
+   <div class="case-images"><figure><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-pipeline-hd.png" alt="GIGANG 실제 로그 파이프라인 화면" loading="lazy"><figcaption>로그 파이프라인 · 실제 프로젝트 화면</figcaption></figure><figure><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-incidents-hd.png" alt="GIGANG 사건 목록 화면" loading="lazy"><figcaption>사건 목록과 상태 확인</figcaption></figure></div></div>
+   <div class="case-footer"><p><strong>참여 범위</strong> 팀원들과 이벤트 수집·DB 연동·위험도 판단 흐름 보완·단말 대응 연결을 진행했습니다. 화면의 값은 시험 시점 데이터입니다.</p><div class="case-links"><a href="https://github.com/youmjjang/youmjjang-lab/blob/main/gigang.html" target="_blank" rel="noopener noreferrer">기존 상세 기록 ↗</a></div></div>
+  </div>
+ </section>
+
+ <section class="case-study alternate section" id="swieogalgot" aria-labelledby="swieogalgot-heading">
+  <div class="container">
+   <div class="case-top"><div class="case-id">02 <span>/ 쉬엄쉬엄</span></div><span>LOCATION WEB SERVICE</span></div>
+   <div class="case-intro"><div><span class="kicker">API INTEGRATION · ERROR HANDLING</span><h2 id="swieogalgot-heading">주변에 있는 장소를<br><em>실제로 찾아갈 수 있게.</em></h2></div><p>서로 다른 출처의 휴식공간 데이터를 결합하고, 경로 API가 실패할 때에도 확인되지 않은 정보를 사실처럼 보여주지 않도록 만들었습니다.</p></div>
+   <div class="rest-layout"><div class="rest-photos"><figure><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 주변 휴식 장소 목록" loading="lazy"><figcaption>휴식 후보 검색</figcaption></figure><figure><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" alt="쉬엄쉬엄 보행 경로 화면" loading="lazy"><figcaption>선택한 장소의 경로 안내</figcaption></figure></div><div class="rest-cases"><div class="explain-item"><span>CASE 01 / SEARCH</span><h3>한 종류의 데이터로 찾기 어려운 장소</h3><p>Overpass의 벤치·착석시설·공원 후보에 TMAP 공원 검색을 결합하고, 결과가 부족할 경우 반경을 넓혀 찾도록 구성했습니다.</p></div><div class="explain-item"><span>CASE 02 / SERVER</span><h3>외부 API와 브라우저 CORS 제약</h3><p>Node.js 서버에서 외부 요청을 중계하고 허용된 서버를 순서대로 시도합니다. 캐시와 동일 요청 합치기를 적용해 불필요한 호출을 줄였습니다.</p></div><div class="explain-item"><span>CASE 03 / TRUST</span><h3>직선거리는 실제 보행 경로가 아닙니다.</h3><p>보행 경로 요청이 실패하면 직선거리를 경로인 것처럼 보여주지 않고 실패 상태를 명시합니다. 지도 등록 여부 역시 실제 이용 가능을 보장하지 않습니다.</p></div><div class="case-links"><a href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a><a href="https://github.com/youmjjang/swieogalgot" target="_blank" rel="noopener noreferrer">소스 코드 ↗</a></div></div></div>
+  </div>
+ </section>
+
+ <section class="case-study section" id="oneurui-jim" aria-labelledby="jim-heading">
+  <div class="container">
+   <div class="case-top"><div class="case-id">03 <span>/ 오늘의짐</span></div><span>PUBLIC DATA · TEAM PROJECT</span></div>
+   <div class="case-intro"><div><span class="kicker">PROBLEM REFRAMING · ROUTE LOGIC</span><h2 id="jim-heading">가까운 보관함보다<br><em>하루 동선에 맞는 보관함.</em></h2></div><p>짐을 맡긴 뒤 일정이 끝나고 다시 되찾으러 가는 시간을 함께 고려하면 추천 기준이 달라집니다. 이동 구간과 데이터 제공 범위, 보관 정보 관리 방법을 같이 설계했습니다.</p></div>
+   <div class="jim-layout"><div class="jim-top-image"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 물품보관함 후보 비교 화면" loading="lazy"><div>보관함 추천 결과 · 실제 프로젝트 화면</div></div><div class="jim-analysis"><div class="route-head"><span>ROUTE MODEL</span><h3>전체 이동을 네 구간으로 구분</h3></div><div class="route-legs"><div><span>LEG 01</span><b>출발 → 보관</b><small>짐을 들고 이동</small></div><div><span>LEG 02</span><b>보관 → 방문</b><small>짐 없이 이동</small></div><div><span>LEG 03</span><b>방문 → 회수</b><small>보관함으로 복귀</small></div><div><span>LEG 04</span><b>회수 → 귀가</b><small>짐을 들고 이동</small></div></div><div class="explain-item"><span>DATA LIMITATION</span><h3>데이터가 없는 곳을 있다고 표현하지 않기</h3><p>운영기관마다 보관함 정보의 형식과 지역 범위가 달라 출처를 나눠 확인했습니다. 실시간 빈자리 센서가 없는 데이터는 이용 가능하다고 단정하지 않았습니다.</p></div><div class="explain-item"><span>SECURITY CONSIDERATION</span><h3>보관함 비밀번호를 더 안전하게 관리</h3><p>일반 메모에 번호와 암호를 남기는 상황을 고려해 브라우저 Web Crypto API를 사용한 암호화 보관 기능을 구성했습니다.</p></div><div class="case-links"><a href="https://oneurui-jim.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a><a href="https://github.com/youmjjang/oneurui-jim" target="_blank" rel="noopener noreferrer">소스 코드 ↗</a></div></div></div>
+   <p class="data-caveat">프로젝트의 경로 계산과 데이터 검증은 코드 및 준비된 자료에 대한 테스트이며 전국 모든 보관함의 실시간 점유·운영 상태를 보증하지 않습니다.</p>
+  </div>
+ </section>
+
+ <section class="process section" id="process" aria-labelledby="process-heading">
+  <div class="container">
+   <div class="section-label"><span>03</span> HOW I WORK</div>
+   <div class="section-heading-row"><div><h2 id="process-heading">모르는 부분을 지나치지 않고,<br><em>확인 가능한 결과로.</em></h2><p>세 프로젝트를 진행하며 반복해 온 작업 방식입니다.</p></div></div>
+   <div class="process-steps"><div><span>01 / DEFINE</span><h3>문제 정의</h3><p>사용자 상황과 지금의 불편을 분리해 정리합니다.</p></div><div><span>02 / TRACE</span><h3>원인 추적</h3><p>데이터 출처, 요청 경로, 예외 조건을 확인합니다.</p></div><div><span>03 / BUILD</span><h3>구현과 연결</h3><p>작은 단위로 만들고 기능이 이어지도록 연동합니다.</p></div><div><span>04 / VERIFY</span><h3>검증과 수정</h3><p>실제 입력과 실패 상황을 살피며 개선합니다.</p></div></div>
+  </div>
+ </section>
+ <section class="contact section" id="contact">
+  <div class="container contact-inner"><div><div class="section-label"><span>04</span> CONTACT</div><h2>다음 문제도<br><em>끝까지 확인하며 해결하겠습니다.</em></h2><p>김유미 · Developer Portfolio 2026</p></div><div class="contact-links"><a href="https://github.com/youmjjang" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://blog.naver.com/youumii2595" target="_blank" rel="noopener noreferrer">Blog <span>↗</span></a><a href="./print.html">PDF 제출용 보기 <span>↗</span></a></div></div>
+ </section>
 </main>
+<footer class="footer"><div class="container footer-inner"><a href="#top" class="footer-brand">youmjjang<span>.dev</span></a><span>© 2026 김유미</span><a href="#top">맨 위로 ↑</a></div></footer>
 </body>
 </html>
