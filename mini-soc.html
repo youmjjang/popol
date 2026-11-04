@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8fafc">
+<meta name="description" content="Mini SOC 프로젝트에서 고민한 문제, 구현과 개선 과정, 결과를 소개합니다.">
+<title>Mini SOC | 문제 해결 과정 — youmjjang.lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./project-detail.css"></head>
+<body>
+<a class="skip" href="#story-main">본문으로 건너뛰기</a>
+<header class="story-header"><div class="wrap story-header-inner"><a class="brand" href="./index.html"><span class="brand-icon">y<span>.</span></span>youmjjang<span class="brand-light">.lab</span></a><a class="story-back" href="./index.html#projects">← 프로젝트 목록으로</a></div></header>
+<main id="story-main"><section class="story-hero"><div class="wrap">
+<div class="story-eyebrow">PERSONAL PROJECT · SECURITY AUTOMATION</div><h1>Mini SOC<span>.</span></h1>
+<p class="story-subtitle">경고 한 줄로 끝나지 않도록, 로그부터 대응 기록까지 이어봤습니다.</p><p class="story-intro">처음에는 Nginx 로그를 파싱하고 오류를 세는 것부터 시작했습니다. 하지만 보안관제는 이상 징후를 발견한 뒤에도 판단, 대응 승인, 기록과 공유가 이어져야 한다는 점에 주목했습니다. 그래서 Python과 Flask로 로그 수집부터 규칙 탐지·판단·알림·일일 보고서까지 하나의 흐름을 직접 구현했습니다.</p>
+<div class="story-tags"><span>Python</span><span>Flask</span><span>Docker · Nginx</span><span>규칙 탐지</span><span>Slack · Markdown</span></div>
+<figure class="story-hero-figure"><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/mini-soc-dashboard-cropped.svg" alt="Mini SOC 실제 대시보드 화면" loading="eager"><figcaption>Mini SOC 프로젝트의 실제 사건 대시보드</figcaption></figure>
+</div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">01 / WHY THIS PROJECT</div>
+<h2>먼저, 무엇이 불편하거나<br>잘못됐는지 생각했습니다.</h2>
+<p class="story-lead">HTTP 오류 수치만 보면 단순 잘못된 요청인지, 반복적인 로그인 시도인지 판단하기 어렵습니다. 또 경보를 만들기만 하면 이후에 어떻게 처리했는지 추적할 수 없었습니다.</p>
+<div class="story-flow"><div><small>01</small><b>웹·로그인 이벤트 파싱</b></div><div><small>02</small><b>시간창 기반 탐지</b></div><div><small>03</small><b>판단·승인</b></div><div><small>04</small><b>경보 기록·알림·보고</b></div></div></div></section>
+<section class="story-section story-section-alt"><div class="wrap story-width"><div class="story-label">02 / PROBLEM SOLVING</div>
+<h2>만들면서 마주친 문제를<br>이렇게 해결했습니다.</h2>
+<p class="story-section-intro">기능을 나열하는 대신, 처음의 생각과 수정한 이유, 그 결과를 순서대로 기록했습니다.</p>
+<div class="story-cases"><article class="story-case"><div class="story-case-number">CASE 01 <span>PROBLEM → CHANGE → RESULT</span></div><h3>오류 개수 세기에서 로그인 패턴 탐지로 확장하다</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>초기 탐지는 HTTP 400 이상 응답과 IP별 오류 횟수 중심이었습니다. 이런 방식으로는 여러 계정을 대상으로 한 로그인 실패 패턴을 구분하기 어려웠습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>같은 IP의 60초 내 로그인 실패 5회 이상을 Brute Force로, 300초 안에 서로 다른 계정 3개 이상의 실패를 Password Spraying으로 분리했습니다. 심야 로그인과 일반 HTTP 오류도 별도 규칙으로 처리했습니다.</p></div><div><span>결과와 의미</span><p>오류 총량만 보는 대신 시간과 대상 계정이라는 맥락을 반영한 경보를 만들었습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 02 <span>PROBLEM → CHANGE → RESULT</span></div><h3>중복 경보와 시간 형식 때문에 생기는 혼란을 줄이다</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>계속 추가되는 로그를 감시할 때 같은 사건이 반복 알림으로 쌓일 수 있고, 시각이 분 단위인지 초 단위인지에 따라 시간창 판단도 달라질 수 있었습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>중복 경보 제거와 라이브 감시의 알림 쿨다운을 도입했습니다. 로그인 시각의 HH:MM·HH:MM:SS 형식을 처리하고 시간창 경계 테스트를 추가했습니다.</p></div><div><span>결과와 의미</span><p>반복되는 탐지와 시간 경계에서 생길 수 있는 오판을 줄이는 방향으로 구조를 개선했습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 03 <span>PROBLEM → CHANGE → RESULT</span></div><h3>AI가 실패해도 멈추지 않고, 높은 위험은 사람이 승인하도록</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>LLM API 키나 네트워크에 의존하면 판단 단계 전체가 멈출 수 있습니다. 또한 고위험이라고 바로 차단하면 오탐의 피해가 생길 수 있습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>AI 호출 실패 시 규칙 기반 판단으로 전환하고, HIGH 경보에 사용자 승인을 넣었습니다. 대응은 계정 잠금·IP 차단 시뮬레이션으로 한정하고, Flask 사건 저장·Slack 알림·Markdown 보고서로 결과를 남겼습니다.</p></div><div><span>결과와 의미</span><p>자동화의 편의성과 사람의 확인 단계를 함께 둔 관제 파이프라인을 만들었습니다.</p></div></div></article></div></div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">03 / RESULTS & LEARNINGS</div>
+<h2>검증하고, 남긴 결과</h2><div class="story-result"><h3>예제 로그에서도 흐름을 점검했습니다</h3><p>프로젝트 README의 샘플 데모는 입력 이벤트 11건, 경보 6건(HIGH 2·MEDIUM 3·LOW 1)과 네 탐지 규칙의 처리를 기록합니다. block_ip와 lock_account는 실제 장비를 변경하지 않는 시뮬레이션입니다.</p></div>
+<div class="story-reflection"><span>WHAT I LEARNED</span><p>탐지 규칙을 만드는 일만큼 중복 관리, 실패 시 대체 경로, 대응 승인, 기록 보존이 중요하다는 것을 배웠습니다.</p></div>
+<div class="story-cta"><a class="story-button story-button-primary" href="./index.html#projects">다른 프로젝트 보기 ↗</a></div>
+</div></section>
+</main><footer class="story-footer"><div class="wrap"><a href="./index.html">youmjjang.lab</a><a href="./index.html#projects">프로젝트 목록 ↑</a></div></footer>
+</body></html>

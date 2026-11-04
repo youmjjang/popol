@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8fafc">
+<meta name="description" content="HTTP Status Pattern Analyzer 프로젝트에서 고민한 문제, 구현과 개선 과정, 결과를 소개합니다.">
+<title>HTTP Status Pattern Analyzer | 문제 해결 과정 — youmjjang.lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./project-detail.css"></head>
+<body>
+<a class="skip" href="#story-main">본문으로 건너뛰기</a>
+<header class="story-header"><div class="wrap story-header-inner"><a class="brand" href="./index.html"><span class="brand-icon">y<span>.</span></span>youmjjang<span class="brand-light">.lab</span></a><a class="story-back" href="./index.html#projects">← 프로젝트 목록으로</a></div></header>
+<main id="story-main"><section class="story-hero"><div class="wrap">
+<div class="story-eyebrow">PERSONAL RESEARCH · LOG ANALYSIS</div><h1>HTTP Status Pattern Analyzer<span>.</span></h1>
+<p class="story-subtitle">같은 ‘오류’여도 같은 기준으로 봐서는 안 된다고 생각했습니다.</p><p class="story-intro">웹 로그에 4xx나 5xx 응답이 많다고 해서 모두 같은 문제라고 볼 수는 없습니다. 저는 초기에 오류를 하나의 기준으로 묶어 분석했지만, 그 방식으로는 어떤 Host/IP를 먼저 확인해야 할지 충분히 설명할 수 없다는 점을 발견했습니다. 그래서 오류 유형별로 판단 기준을 다시 실험하고, 그 결과를 실제 로그 분석 도구에 연결했습니다.</p>
+<div class="story-tags"><span>Python</span><span>로그 분석</span><span>모의실험 48조건</span><span>CSV · JSON</span></div>
+<div class="story-visual"><div class="story-visual-eyebrow">48 CONDITIONS · 4 STATUS GROUPS</div><h2>같은 오류, 다른 판단 기준.</h2><div class="story-visual-grid"><div><span>401 / 403</span><b>60s · 5회</b></div><div><span>404</span><b>120s · 8회</b></div><div><span>429</span><b>60s · 3회</b></div><div><span>5xx</span><b>30s · 3회</b></div></div><p>모의실험을 통해 오류 유형별로 기준을 비교했습니다.</p></div>
+</div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">01 / WHY THIS PROJECT</div>
+<h2>먼저, 무엇이 불편하거나<br>잘못됐는지 생각했습니다.</h2>
+<p class="story-lead">한꺼번에 발생한 HTTP 오류를 단순 집계하면, 인증 실패와 없는 페이지 요청, 요청 제한, 서버 장애가 모두 같은 무게로 취급됩니다. 숫자만 보여주는 도구라면 분석에 익숙하지 않은 사용자는 결국 원본 로그를 다시 읽어야 했습니다.</p>
+<div class="story-flow"><div><small>01</small><b>로그 입력·파싱</b></div><div><small>02</small><b>상태 코드별 분류</b></div><div><small>03</small><b>시간창·횟수 비교</b></div><div><small>04</small><b>확인 대상과 이유 표시</b></div></div></div></section>
+<section class="story-section story-section-alt"><div class="wrap story-width"><div class="story-label">02 / PROBLEM SOLVING</div>
+<h2>만들면서 마주친 문제를<br>이렇게 해결했습니다.</h2>
+<p class="story-section-intro">기능을 나열하는 대신, 처음의 생각과 수정한 이유, 그 결과를 순서대로 기록했습니다.</p>
+<div class="story-cases"><article class="story-case"><div class="story-case-number">CASE 01 <span>PROBLEM → CHANGE → RESULT</span></div><h3>4xx를 한 그룹으로 묶었던 첫 실험을 바꾸다</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>처음에는 4xx 전체에 하나의 반복 횟수와 시간 기준을 적용했습니다. 하지만 401/403, 404, 429는 의미와 발생 패턴이 다릅니다.</p></div><div><span>이렇게 바꿨습니다</span><p>401/403·404·429·5xx 네 범주로 나눈 뒤 30·60·120초의 시간창과 3·5·8·12회의 기준을 조합해 총 48개 조건을 비교했습니다.</p></div><div><span>결과와 의미</span><p>모의실험에서 유형마다 F1이 가장 높은 조건이 다르게 나타났습니다. 최종 기준을 프로그램의 기본 분석 규칙으로 연결했습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 02 <span>PROBLEM → CHANGE → RESULT</span></div><h3>‘몇 번 발생했나’보다 ‘왜 확인해야 하나’를 먼저 보여주다</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>초기 화면은 Host/IP와 숫자, 임계값이 먼저 보여 사용자가 탐지 이유를 바로 이해하기 어려웠습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>어느 경로에서 무슨 오류가 몇 초 안에 몇 번 반복됐는지 문장으로 설명하고, 판단 근거가 된 로그와 주요 경로를 함께 보여주는 형태로 결과 화면을 수정했습니다.</p></div><div><span>결과와 의미</span><p>로그를 처음부터 모두 읽지 않아도 우선 확인 대상을 좁히고 근거를 따라갈 수 있는 흐름을 만들었습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 03 <span>PROBLEM → CHANGE → RESULT</span></div><h3>입력 데이터가 매번 깔끔하지 않다는 점을 고려하다</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>실제 분석 대상은 형식이 섞이거나 일부 행이 손상될 수 있습니다. 올바른 예제 한 개로만 확인해서는 도구를 신뢰하기 어렵다고 봤습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>Nginx/Apache 로그와 CSV·JSON/JSONL 입력을 처리하도록 구성하고, 잘못된 줄이 섞인 예제와 대량 로그 예제로 결과를 점검했습니다.</p></div><div><span>결과와 의미</span><p>유효한 행의 분석과 잘못된 입력 보고를 구분해, 문제를 발견하기 쉬운 처리 흐름을 만들었습니다.</p></div></div></article></div></div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">03 / RESULTS & LEARNINGS</div>
+<h2>검증하고, 남긴 결과</h2><div class="story-result"><h3>숫자를 그대로 결과로 쓰지 않았습니다</h3><p>401/403은 60초·5회(F1 0.950), 404는 120초·8회(0.950), 429는 60초·3회(0.961), 5xx는 30초·3회(0.934)가 모의실험 비교에서 높게 나타났습니다. 이는 특정 실험 데이터 기준의 결과로, 실제 운영 환경의 탐지 정확도라고 주장하지 않습니다.</p></div>
+<div class="story-reflection"><span>WHAT I LEARNED</span><p>기준을 정하는 연구와 그 기준을 사람이 이해할 수 있게 설명하는 도구는 함께 설계되어야 한다고 배웠습니다.</p></div>
+<div class="story-cta"><a class="story-button story-button-primary" href="./index.html#projects">다른 프로젝트 보기 ↗</a></div>
+</div></section>
+</main><footer class="story-footer"><div class="wrap"><a href="./index.html">youmjjang.lab</a><a href="./index.html#projects">프로젝트 목록 ↑</a></div></footer>
+</body></html>

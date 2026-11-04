@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8fafc">
+<meta name="description" content="쉬엄쉬엄 프로젝트에서 고민한 문제, 구현과 개선 과정, 결과를 소개합니다.">
+<title>쉬엄쉬엄 | 문제 해결 과정 — youmjjang.lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./project-detail.css"></head>
+<body>
+<a class="skip" href="#story-main">본문으로 건너뛰기</a>
+<header class="story-header"><div class="wrap story-header-inner"><a class="brand" href="./index.html"><span class="brand-icon">y<span>.</span></span>youmjjang<span class="brand-light">.lab</span></a><a class="story-back" href="./index.html#projects">← 프로젝트 목록으로</a></div></header>
+<main id="story-main"><section class="story-hero"><div class="wrap">
+<div class="story-eyebrow">WEB SERVICE · LOCATION EXPERIENCE</div><h1>쉬엄쉬엄<span>.</span></h1>
+<p class="story-subtitle">‘가까운 곳’이 아니라 ‘정말 쉬러 갈 수 있는 곳’을 찾고 싶었습니다.</p><p class="story-intro">낯선 동네에서 잠시 앉아 쉬고 싶을 때는 카페가 아니라 가까운 벤치나 공원이 필요할 수 있습니다. 그런데 일반 장소 검색만으로는 휴식공간을 찾고 실제 걸어갈 경로까지 확인하기 번거로웠습니다. 그래서 현재 위치와 검색한 장소를 기준으로 휴식 후보를 탐색하고 보행 경로를 안내하는 웹 서비스를 만들었습니다.</p>
+<div class="story-tags"><span>JavaScript</span><span>OpenStreetMap · Overpass</span><span>TMAP</span><span>지도 · GPS</span></div>
+<figure class="story-hero-figure"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 프로젝트 화면" loading="eager"><figcaption>주변 휴식공간을 찾는 모바일 화면</figcaption></figure>
+</div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">01 / WHY THIS PROJECT</div>
+<h2>먼저, 무엇이 불편하거나<br>잘못됐는지 생각했습니다.</h2>
+<p class="story-lead">지도에는 공원·벤치·쉼터 데이터가 서로 다른 형태로 들어 있고, 어떤 장소는 정확한 앉을 자리나 입구 위치가 표시되지 않습니다. 찾기와 길안내를 각각 다른 서비스에서 해야 한다면 사용자가 다시 검색해야 합니다.</p>
+<div class="story-flow"><div><small>01</small><b>현재 위치·장소 검색</b></div><div><small>02</small><b>휴식공간 후보 정리</b></div><div><small>03</small><b>목록·지도 선택</b></div><div><small>04</small><b>보행 경로·GPS 안내</b></div></div></div></section>
+<section class="story-section story-section-alt"><div class="wrap story-width"><div class="story-label">02 / PROBLEM SOLVING</div>
+<h2>만들면서 마주친 문제를<br>이렇게 해결했습니다.</h2>
+<p class="story-section-intro">기능을 나열하는 대신, 처음의 생각과 수정한 이유, 그 결과를 순서대로 기록했습니다.</p>
+<div class="story-cases"><article class="story-case"><div class="story-case-number">CASE 01 <span>PROBLEM → CHANGE → RESULT</span></div><h3>흩어진 지도 데이터를 한 번에 비교할 수 있게</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>벤치, 정자, 공원은 지도 태그와 데이터 출처가 서로 달라 한 종류의 검색만으로는 후보가 충분하지 않을 수 있었습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>OpenStreetMap·Overpass에서 착석시설과 공원 후보를 나눠 조회하고, TMAP 공원 검색을 결합했습니다. 거리순 목록과 지도 마커를 함께 보여주고 결과가 부족하면 반경을 넓히도록 만들었습니다.</p></div><div><span>결과와 의미</span><p>장소 유형이 다르더라도 하나의 목록에서 근처 휴식 후보를 비교하도록 흐름을 단순화했습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 02 <span>PROBLEM → CHANGE → RESULT</span></div><h3>가까워 보인다고 실제 보행 시간이 짧은 것은 아니어서</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>직선거리가 짧은 장소도 건물이나 도로 때문에 돌아가야 할 수 있습니다. 모든 장소를 무조건 최단거리로 안내하는 것은 부정확하다고 봤습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>가까운 후보부터 TMAP 보행 경로를 요청하고, 선택한 장소에는 별도 경로를 계산하도록 구성했습니다. 경로 요청이 실패할 때 직선거리를 보행 경로처럼 보여주지 않고 실패 상태를 안내합니다.</p></div><div><span>결과와 의미</span><p>실제 경로가 확인된 경우와 그렇지 않은 경우를 구별해 사용자의 판단을 돕도록 했습니다.</p></div></div></article>
+<article class="story-case"><div class="story-case-number">CASE 03 <span>PROBLEM → CHANGE → RESULT</span></div><h3>외부 API가 실패해도 화면이 이유 없이 비지 않도록</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>Overpass 서버 연결 문제, 브라우저 CORS 제한, API 키나 위치 권한 누락으로 검색·안내 기능이 실패할 수 있었습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>Overpass 요청을 서버에서 중계하고 허용된 서버를 순차 시도하도록 했습니다. 요청 캐시와 중복 조회 합치기를 적용하고, GPS 권한이나 경로 API가 없을 때에는 가능한 기능과 실패 사유를 구분해 표시하도록 정리했습니다.</p></div><div><span>결과와 의미</span><p>외부 서비스의 불안정성을 완전히 없애지는 못하지만, 무엇이 안 되는지 알 수 있게 설계했습니다.</p></div></div></article></div></div></section>
+<section class="story-section"><div class="wrap story-width"><div class="story-label">03 / RESULTS & LEARNINGS</div>
+<h2>검증하고, 남긴 결과</h2><div class="story-result"><h3>휴식 가능 여부까지 단정하지 않았습니다</h3><p>지도 데이터의 존재가 실제 빈자리·무료 이용·개방 여부를 보장하지는 않습니다. 앱은 장소 후보와 경로를 제공하며, 상용 내비게이션 수준의 음성·백그라운드 안내는 제공하지 않습니다.</p></div>
+<figure class="story-secondary"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" loading="lazy" alt="쉬엄쉬엄 추가 실제 화면"><figcaption>선택한 장소까지의 안내 화면</figcaption></figure><div class="story-reflection"><span>WHAT I LEARNED</span><p>사용자가 보는 결과와 데이터가 실제로 보장하는 범위를 구분하는 설계가 중요했습니다.</p></div>
+<div class="story-cta"><a class="story-button story-button-primary" href="./index.html#projects">다른 프로젝트 보기 ↗</a><a class="story-button" href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a></div>
+</div></section>
+</main><footer class="story-footer"><div class="wrap"><a href="./index.html">youmjjang.lab</a><a href="./index.html#projects">프로젝트 목록 ↑</a></div></footer>
+</body></html>

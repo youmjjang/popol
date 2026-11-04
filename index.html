@@ -3,162 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="김유미의 개발 포트폴리오. GIGANG, 쉬엄쉬엄, 오늘의짐 등 실제 프로젝트와 사용 기술을 소개합니다.">
-  <meta property="og:title" content="김유미 | 개발 포트폴리오">
-  <meta property="og:description" content="웹 서비스와 보안 관제 프로젝트를 소개합니다.">
-  <title>김유미 | 개발 포트폴리오</title>
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="김유미의 개발 포트폴리오 — 직접 만든 웹·앱 및 보안 프로젝트">
+  <meta property="og:title" content="youmjjang.lab — 김유미의 개발 포트폴리오">
+  <meta property="og:description" content="직접 만들고 실행해 본 프로젝트와 사용 기술을 소개합니다.">
+  <title>youmjjang.lab — 김유미 | Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">본문 바로가기</a>
-
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="site-name" href="#top">김유미 <span>PORTFOLIO</span></a>
-      <nav class="site-nav" aria-label="사이트 메뉴">
-        <a href="#about">소개</a>
-        <a href="#skills">기술</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#contact">링크</a>
-      </nav>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="youmjjang lab 홈"><span class="brand-icon">y<span>.</span></span>youmjjang<span class="brand-light">.lab</span></a>
+    <nav id="nav" class="nav" aria-label="메인 메뉴">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#process">Approach</a><a href="#contact">Contact</a><a href="https://blog.naver.com/youumii2595" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+    </nav>
+    <div class="head-end"><a class="github-link" href="https://github.com/youmjjang" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button id="menu" class="menu" type="button" aria-controls="nav" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span></button></div>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow"><span class="live-dot"></span> DEVELOPER PORTFOLIO <span class="bar"></span> 2026</div>
+      <h1 id="hero-title">직접 만들고,<br><span class="ink-blue">직접 확인하며,</span><br>계속 개선합니다<span class="period">.</span></h1>
+      <p class="hero-desc">안녕하세요, <strong>김유미</strong>입니다.<br>컴퓨터소프트웨어공학을 전공하고 웹·앱과 보안 프로젝트를 만들었습니다.<br>지금까지 진행한 프로젝트와 사용한 기술을 소개합니다.</p>
+      <div class="hero-buttons"><a class="btn btn-blue" href="#projects">프로젝트 살펴보기 <span>↗</span></a><a class="btn btn-outline" href="#about">저에 대해 알아보기 <span>↓</span></a></div>
+      <div class="microline"><span class="line"></span> SOFTWARE ENGINEERING · WEB · PROJECTS</div>
     </div>
-  </header>
+    <div class="hero-art" aria-label="프로젝트 기획부터 결과 확인까지의 과정 다이어그램">
+      <div class="glow one"></div><div class="glow two"></div>
+      <div class="art-head"><span class="traffic"><i></i><i></i><i></i></span><span>LAB / WORKFLOW</span><span>01 — 04</span></div>
+      <div class="art-title"><span>PROJECT WORKFLOW</span><strong>From idea<br>to <em>service.</em></strong><p>아이디어를 구현하고 결과를 확인합니다.</p></div>
+      <div class="pipeline">
+        <div class="pipe-row"><span class="pipe-num">01</span><div><small>IDEA</small><b>Plan</b><span>Requirements · Flow</span></div><span class="pipe-tail">↘</span></div>
+        <div class="pipe-row"><span class="pipe-num">02</span><div><small>DEVELOP</small><b>Build</b><span>Code · Features</span></div><span class="pipe-tail">↘</span></div>
+        <div class="pipe-row"><span class="pipe-num">03</span><div><small>INTEGRATE</small><b>Connect</b><span>API · Services</span></div><span class="pipe-tail">↘</span></div>
+        <div class="pipe-row pipe-done"><span class="pipe-num">04</span><div><small>TEST</small><b>Verify</b><span>Result · Fixes</span></div><span class="pipe-tail">✓</span></div>
+      </div>
+      <div class="art-footer">PLAN / BUILD / IMPROVE <span>✳ ✳ ✳</span></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="scroll-hint"><span>SCROLL TO EXPLORE</span><span>↓</span></div></div>
+</section>
 
-  <main id="main">
-    <section class="intro" id="top" aria-labelledby="main-heading">
-      <div class="container intro-inner">
-        <p class="eyebrow">DEVELOPER PORTFOLIO · 2026</p>
-        <h1 id="main-heading">안녕하세요, 김유미입니다.</h1>
-        <p class="intro-description">컴퓨터소프트웨어공학을 전공하고 웹 서비스와 보안 관제 프로젝트를 진행했습니다.<br class="desktop-break">
-        지금까지 만든 프로젝트와 사용한 기술을 정리한 포트폴리오입니다.</p>
-        <div class="intro-links">
-          <a href="#projects" class="button primary">프로젝트 보기 <span aria-hidden="true">↓</span></a>
-          <a href="https://github.com/youmjjang" class="button secondary" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+<section class="section about" id="about" aria-labelledby="about-title">
+  <div class="wrap intro-layout">
+    <aside class="side-caption">01 / ABOUT <span></span></aside>
+    <div class="about-main"><p class="kicker">A LITTLE ABOUT ME</p><h2 class="h2" id="about-title">기능을 만드는 데서 멈추지 않고,<br><span>왜 필요한지부터 고민합니다.</span></h2>
+      <p class="lead">컴퓨터소프트웨어공학을 전공하고 앱 개발, 웹 서비스, 보안 관제 프로젝트를 진행했습니다. 직접 구현한 기능을 실행하고 오류를 확인하며 수정하는 방식으로 작업했습니다.</p>
+      <div class="values"><div><span>01</span><h3>주체성</h3><p>직접 확인한 사실을 바탕으로 판단합니다.</p></div><div><span>02</span><h3>실행력</h3><p>완벽한 준비보다 작동하는 첫 결과를 만듭니다.</p></div><div><span>03</span><h3>탐구심</h3><p>예상과 다른 결과가 나오면 원인부터 찾습니다.</p></div></div>
+      <div class="skills"><span class="skills-title">TOOLS I HAVE USED</span><div><span>Python</span><span>Flask</span><span>JavaScript</span><span>HTML / CSS</span><span>Docker</span><span>Nginx</span><span>MySQL</span><span>Git / GitHub</span><span>REST API</span><span>Android</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section work" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div class="section-head"><div><p class="kicker">SELECTED WORK / 2026</p><h2 class="h2" id="projects-title">지금까지 만든<br><span>프로젝트를 소개합니다.</span></h2></div><p>프로젝트 소개, 사용 기술과<br>실제 구현 화면을 정리했습니다.</p></div>
+    <div class="filters" role="group" aria-label="프로젝트 필터"><button class="filter selected" data-filter="all" type="button" aria-pressed="true">All projects <span>05</span></button><button class="filter" data-filter="data" type="button" aria-pressed="false">Tools &amp; Automation</button><button class="filter" data-filter="security" type="button" aria-pressed="false">AI &amp; Security</button><button class="filter" data-filter="product" type="button" aria-pressed="false">Web &amp; Product</button></div>
+    <div class="project-grid">
+      <article class="project feature" data-category="data security" aria-labelledby="analyzer-title">
+        <div class="cover analyzer"><div class="fake-ui"><div class="fake-head"><span class="fake-dots">● ● ●</span> status-pattern-analyzer / results <span>● ANALYZED</span></div><div class="fake-content"><div class="fake-sidebar"><span>01 &nbsp; Input</span><span>02 &nbsp; Rules</span><span class="active">03 &nbsp; Results</span><span>04 &nbsp; Export</span></div><div class="fake-main"><span>HTTP STATUS / PATTERN ANALYSIS</span><h4>오류 유형별 기준 비교</h4><small>모의 로그 실험 결과를 설명하기 위한 시각화</small><div class="f1-chart"><div><em>401/403</em><span><i style="width:95%"></i></span><b>.950</b></div><div><em>404</em><span><i style="width:95%"></i></span><b>.950</b></div><div><em>429</em><span><i style="width:96.1%"></i></span><b>.961</b></div><div><em>5xx</em><span><i style="width:93.4%"></i></span><b>.934</b></div></div><small class="metric-note">F1 · 모의실험 지표 / 운영 환경 성능 아님</small></div></div></div><span class="cover-no">DATA / 01</span></div>
+        <div class="project-info"><div class="project-meta"><span>01 / PERSONAL RESEARCH &amp; TOOL</span><span>DATA · AUTOMATION</span></div><h3 id="analyzer-title">HTTP Status Pattern Analyzer</h3><p class="project-tagline">연구에서 얻은 분석 기준을 실제 도구로 연결하다.</p><p class="project-desc">HTTP 오류를 하나로 묶으면 유형별 차이가 가려진다는 문제에서 출발했습니다. 401/403·404·429·5xx와 48개 조건을 모의 로그로 비교하고, 결과를 로그 분석 도구의 자동 기준에 연결했습니다.</p><div class="problem"><span>PROBLEM → SOLUTION</span><p>일괄 오류 기준의 한계 → 유형별 시간창·임계값 비교 및 분석</p></div><div class="tags"><span>Python</span><span>Log Parsing</span><span>CSV / JSON</span><span>Analysis</span></div><div class="project-actions"><a href="./http-status-pattern-analyzer.html">자세히 보기 ↗</a></div></div></article>
+      <article class="project feature" data-category="data security" aria-labelledby="gigang-title">
+        <div class="cover photo-cover dark-cover" style="background:linear-gradient(145deg,#deedf9,#edf5fc);padding:23px">
+          <img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/gigang-overview-hd.png" alt="GIGANG 실제 종합 관제 화면 · 고해상도 프로젝트 캡처" loading="lazy" style="max-height:410px;width:100%;height:auto;border-radius:9px;box-shadow:0 18px 40px rgba(24,53,72,.17)">
+          <span class="screen-mark">ACTUAL PROJECT SCREEN / HD</span>
         </div>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <h2 class="section-title" id="about-heading">소개 <span>About Me</span></h2>
-        <p class="about-text">웹 화면 구현부터 외부 API 연동, 서버와 데이터 처리, 오류 수정까지 다양한 개발 과정을 경험했습니다.
-        프로젝트를 진행할 때는 직접 실행하고 확인하면서 필요한 기능을 보완하는 방식으로 작업합니다.</p>
-      </div>
-    </section>
-
-    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <h2 class="section-title" id="skills-heading">기술 스택 <span>Tech Stack</span></h2>
-        <p class="section-description">프로젝트에서 사용하거나 실습한 기술입니다.</p>
-        <div class="skills-list">
-          <div class="skill-group"><h3>Language</h3><p>Python, JavaScript, TypeScript, HTML, CSS</p></div>
-          <div class="skill-group"><h3>Frontend</h3><p>React</p></div>
-          <div class="skill-group"><h3>Backend &amp; API</h3><p>Node.js, Flask, FastAPI, REST API 연동</p></div>
-          <div class="skill-group"><h3>Tools &amp; Deployment</h3><p>Git, GitHub, Docker, Railway, Vercel</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <h2 class="section-title" id="projects-heading">프로젝트 <span>Projects</span></h2>
-        <p class="section-description">주요 프로젝트 3개를 소개합니다. 화면 사진과 기능, 사용 기술, GitHub 링크를 확인할 수 있습니다.</p>
-
-        <article class="project" id="gigang">
-          <div class="project-gallery gallery-gigang">
-            <img class="gallery-main" src="https://raw.githubusercontent.com/dldaudlee36/GIGANG/main/screenshots/01_overview.png" alt="GIGANG 보안 관제 종합 화면" loading="lazy">
-            <img class="gallery-secondary" src="https://raw.githubusercontent.com/dldaudlee36/GIGANG/main/screenshots/06_pipeline.png" alt="GIGANG 이벤트 로그 파이프라인 화면" loading="lazy">
-          </div>
-          <div class="project-info">
-            <p class="project-category">01 · 팀 프로젝트 / 보안 관제</p>
-            <h3>GIGANG <span>(기강)</span></h3>
-            <p class="project-summary">사내 DB, 사용자 단말, 브라우저에서 발생하는 이벤트를 연계해 정보 유출 위험을 탐지하고 관리하는 보안 관제 시스템입니다.</p>
-            <h4>주요 기능</h4>
-            <ul class="feature-list">
-              <li>DB·단말·브라우저 이벤트 수집 및 연동</li>
-              <li>이벤트 연관성 분석과 위험도 상태 분류</li>
-              <li>관제 대시보드, 사건 목록, 정책 및 알림 기능</li>
-            </ul>
-            <p class="project-role"><strong>참여 작업</strong> 이벤트 수집·DB/서버 연동, 판단 흐름 보완, 단말 대응 기능 연결</p>
-            <div class="project-stack" aria-label="사용 기술">
-              <span>Python</span><span>Flask</span><span>Streamlit</span><span>Gemini</span><span>Railway</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dldaudlee36/GIGANG" target="_blank" rel="noopener noreferrer">GitHub 보기 <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/youmjjang/youmjjang-lab/blob/main/gigang.html" target="_blank" rel="noopener noreferrer">프로젝트 설명 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" id="swieogalgot">
-          <div class="project-gallery gallery-phones">
-            <img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 주변 휴식공간 검색 목록 화면" loading="lazy">
-            <img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" alt="쉬엄쉬엄 휴식공간 보행 경로 화면" loading="lazy">
-          </div>
-          <div class="project-info">
-            <p class="project-category">02 · 웹 서비스 / 위치 기반</p>
-            <h3>쉬엄쉬엄</h3>
-            <p class="project-summary">현재 위치나 검색한 장소를 기준으로 벤치, 정자, 공원 등 주변 휴식공간을 찾아주는 웹 서비스입니다.</p>
-            <h4>주요 기능</h4>
-            <ul class="feature-list">
-              <li>현재 위치 및 장소명 기반 주변 휴식공간 검색</li>
-              <li>장소 목록·지도 표시와 보행 경로 안내</li>
-              <li>Node.js 서버를 이용한 외부 지도 API 요청 중계</li>
-            </ul>
-            <div class="project-stack" aria-label="사용 기술">
-              <span>JavaScript</span><span>Node.js</span><span>OpenStreetMap</span><span>Overpass API</span><span>TMAP</span>
-            </div>
-            <div class="project-links">
-              <a href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 보기 <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/youmjjang/swieogalgot" target="_blank" rel="noopener noreferrer">GitHub 보기 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" id="oneurui-jim">
-          <div class="project-gallery gallery-jim">
-            <img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 보관함 추천 결과 웹페이지" loading="lazy">
-          </div>
-          <div class="project-info">
-            <p class="project-category">03 · 팀 프로젝트 / 공공데이터</p>
-            <h3>오늘의짐</h3>
-            <p class="project-summary">여행 중 짐을 맡길 때 보관함 위치뿐 아니라 짐을 다시 찾으러 가는 이동 동선까지 고려하는 서비스입니다.</p>
-            <h4>주요 기능</h4>
-            <ul class="feature-list">
-              <li>역별 물품보관함 정보 조회 및 비교</li>
-              <li>보관·방문·회수·귀가 이동 동선 계산</li>
-              <li>Web Crypto API를 이용한 보관 정보 암호화 기능</li>
-            </ul>
-            <div class="project-stack" aria-label="사용 기술">
-              <span>React</span><span>TypeScript</span><span>Node.js</span><span>공공데이터</span><span>Web Crypto API</span>
-            </div>
-            <div class="project-links">
-              <a href="https://oneurui-jim.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 보기 <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/youmjjang/oneurui-jim" target="_blank" rel="noopener noreferrer">GitHub 보기 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 class="section-title" id="contact-heading">링크 <span>Links</span></h2>
-        <p>프로젝트 코드와 학습 기록은 아래에서 확인할 수 있습니다.</p>
-        <div class="contact-links">
-          <a href="https://github.com/youmjjang" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://blog.naver.com/youumii2595" target="_blank" rel="noopener noreferrer">Blog <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content"><strong>김유미</strong><span>Developer Portfolio · 2026</span></div>
-  </footer>
+        <div class="project-info">
+          <div class="project-meta"><span>02 / TEAM PROJECT</span><span>SECURITY · DATA PIPELINE</span></div>
+          <h3 id="gigang-title">GIGANG <small>기강</small></h3>
+          <p class="project-tagline">보안 이벤트를 연결하고, 위험 판단에 근거를 더하다.</p>
+          <p class="project-desc">브라우저·Windows 단말·사내 DB의 이벤트를 수집·정규화하고, 자료 접근부터 외부 전송 시도까지의 관계를 분석하는 통합 보안관제 플랫폼입니다. 동적 위험도 점수, 3-Hop 분석, 정책 제어와 알림을 연결했습니다.</p>
+          <div class="problem"><span>TEAMWORK → RESULT</span><p>팀원들과 브라우저·단말·서버 기능을 하나의 관제 흐름으로 연결하고, 연동 과정에서 발견한 문제를 함께 해결했습니다. 실제 이벤트 테스트를 통해 수집·분석·관제 기능이 정상적으로 이어지는 것을 확인했습니다.</p></div>
+          <div class="tags"><span>Python</span><span>FastAPI</span><span>Risk Scoring</span><span>Event Correlation</span><span>Gemini</span></div>
+          
+        <div class="project-actions"><a href="./gigang.html">자세히 보기 ↗</a></div></div></article>
+      <article class="project" data-category="data security" aria-labelledby="soc-title"><div class="cover photo-cover dark-cover"><img src="https://raw.githubusercontent.com/youmjjang/youmjjang-lab/main/assets/mini-soc-dashboard-cropped.svg" alt="Mini SOC 실제 대시보드 화면" loading="lazy"><span class="screen-mark">ACTUAL PROJECT SCREEN</span></div><div class="project-info"><div class="project-meta"><span>03 / PERSONAL PROJECT</span><span>AUTOMATION</span></div><h3 id="soc-title">Mini SOC</h3><p class="project-tagline">로그 수집에서 보고서까지 연결한 작은 관제 파이프라인.</p><p class="project-desc">Nginx·로그인 이벤트를 Python으로 구조화하고 규칙 기반 탐지, Flask 경보 수신, 사건 기록, Slack 알림과 Markdown 일일 보고서까지 연결했습니다. 차단·잠금은 시뮬레이션입니다.</p><div class="tags"><span>Python</span><span>Docker</span><span>Flask</span><span>Nginx</span></div><div class="project-actions"><a href="./mini-soc.html">자세히 보기 ↗</a></div></div></article>
+      <article class="project" data-category="product" aria-labelledby="rest-title"><div class="cover photo-cover mint-cover lunch-cover"><div class="lunch-shots"><figure class="lunch-shot lunch-shot-a"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 주변 휴식공간 검색 및 목록 화면" loading="lazy"></figure><figure class="lunch-shot lunch-shot-b"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" alt="쉬엄쉬엄 휴식공간까지의 보행 경로 안내 화면" loading="lazy"></figure></div><span class="screen-mark">ACTUAL PROJECT SCREENS</span></div><div class="project-info"><div class="project-meta"><span>04 / WEB SERVICE</span><span>PRODUCT</span></div><h3 id="rest-title">쉬엄쉬엄</h3><p class="project-tagline">가까운 휴식공간을 찾고, 가는 길까지 안내합니다.</p><p class="project-desc">현재 위치나 검색한 장소를 기준으로 주변 벤치·정자·공원 등 휴식공간을 지도와 목록으로 찾아볼 수 있는 웹 서비스입니다. 장소를 선택하면 TMAP 보행 경로를 확인하고 GPS 위치 기반 안내를 시작할 수 있습니다.</p><div class="tags"><span>JavaScript</span><span>OpenStreetMap</span><span>TMAP</span><span>GPS</span></div><div class="project-actions"><a href="./swieogalgot.html">자세히 보기 ↗</a><a href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a></div></div></article>
+      <article class="project last-project" data-category="data product" aria-labelledby="jim-title"><div class="cover photo-cover sky-cover"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/jim-results.png" alt="오늘의짐 물품보관함 검색 결과 화면" loading="lazy"><span class="screen-mark">PROJECT SCREEN</span></div><div class="project-info"><div class="project-meta"><span>05 / SERVICE PROJECT</span><span>PUBLIC DATA</span></div><h3 id="jim-title">오늘의짐</h3><p class="project-tagline">보관함 정보에 이동 시간이라는 기준을 더하다.</p><p class="project-desc">물품보관함의 위치 정보만으로는 실제 일정에 적합한지 판단하기 어렵다는 점에 주목했습니다. 역별 보관함 정보와 이동·체류 가능 시간을 함께 고려하는 서비스 프로젝트입니다.</p><div class="tags"><span>Public Data</span><span>Time Calculation</span><span>UX</span></div><div class="project-actions"><a href="./oneurui-jim.html">자세히 보기 ↗</a><a href="https://oneurui-jim.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a></div></div></article>
+    </div>
+    <p class="work-footnote">* HTTP 분석 수치는 모의실험 결과이며, 실제 환경의 탐지 성능을 의미하지 않습니다. 프로젝트별 자세히 보기에서 고민과 개선 과정, 검증 범위를 확인할 수 있습니다.</p>
+  </div>
+</section>
+<section class="section process" id="process" aria-labelledby="process-title"><div class="wrap"><p class="kicker">HOW I WORK</p><h2 class="h2" id="process-title">일하는 방식에도<br><span>나름의 순서가 있습니다.</span></h2><div class="steps"><div class="step"><div class="step-top"><span>01</span><b>◎</b></div><h3>문제를 정의합니다</h3><p>기능 목록보다 사용자가 겪는 문제와 현재 데이터의 한계부터 확인합니다.</p><span class="step-bottom">DEFINE THE PROBLEM</span></div><div class="step"><div class="step-top"><span>02</span><b>⌁</b></div><h3>작게 구현하고 검증합니다</h3><p>수집·처리·판단을 나눠 실행하며 어디서 결과가 달라지는지 추적합니다.</p><span class="step-bottom">BUILD &amp; VALIDATE</span></div><div class="step"><div class="step-top"><span>03</span><b>↗</b></div><h3>결과를 개선합니다</h3><p>반복되는 단계는 자동화하고, 다음 사람이 이해할 수 있는 형태로 정리합니다.</p><span class="step-bottom">REFINE &amp; DELIVER</span></div></div></div></section>
+<section class="contact section" id="contact" aria-labelledby="contact-title"><div class="wrap"><div class="contact-inner"><div><p class="kicker">LET'S CONNECT</p><h2 id="contact-title">다음 문제도<br>함께 풀어가고 싶습니다<span>.</span></h2><p>웹 서비스와 다양한 프로젝트를 만들고 개선하는 일에 관심이 있습니다.</p><div class="contact-buttons"><a class="btn btn-white" href="mailto:youmnana18@gmail.com">이메일 보내기 ↗</a><a class="contact-git" href="https://github.com/youmjjang" target="_blank" rel="noopener noreferrer">GitHub 보기 ↗</a><a class="contact-git" href="https://blog.naver.com/youumii2595" target="_blank" rel="noopener noreferrer">블로그 보기 ↗</a></div></div><div class="huge-y" aria-hidden="true">Y<span>.</span></div></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><a class="brand footer-brand" href="#top">youmjjang<span>.lab</span></a><span>© 2026 김유미. Built with curiosity.</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
