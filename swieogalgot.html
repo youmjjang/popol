@@ -12,7 +12,16 @@
 <div class="story-eyebrow">WEB SERVICE · LOCATION EXPERIENCE</div><h1>쉬엄쉬엄<span>.</span></h1>
 <p class="story-subtitle">‘가까운 곳’이 아니라 ‘정말 쉬러 갈 수 있는 곳’을 찾고 싶었습니다.</p><p class="story-intro">낯선 동네에서 잠시 앉아 쉬고 싶을 때는 카페가 아니라 가까운 벤치나 공원이 필요할 수 있습니다. 그런데 일반 장소 검색만으로는 휴식공간을 찾고 실제 걸어갈 경로까지 확인하기 번거로웠습니다. 그래서 현재 위치와 검색한 장소를 기준으로 휴식 후보를 탐색하고 보행 경로를 안내하는 웹 서비스를 만들었습니다.</p>
 <div class="story-tags"><span>JavaScript</span><span>OpenStreetMap · Overpass</span><span>TMAP</span><span>지도 · GPS</span></div>
-<figure class="story-hero-figure"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 프로젝트 화면" loading="eager"><figcaption>주변 휴식공간을 찾는 모바일 화면</figcaption></figure>
+<div class="rest-gallery" aria-label="쉬엄쉬엄 실제 서비스 화면 두 장">
+  <figure class="rest-gallery-item">
+    <div class="rest-gallery-window"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-list.png" alt="쉬엄쉬엄 주변 휴식공간 목록 화면" loading="eager"></div>
+    <figcaption><strong>휴식공간 검색</strong><span>현재 위치 기준 주변 장소 목록</span></figcaption>
+  </figure>
+  <figure class="rest-gallery-item">
+    <div class="rest-gallery-window"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" alt="쉬엄쉬엄 보행 경로 안내 화면" loading="eager"></div>
+    <figcaption><strong>보행 경로 안내</strong><span>선택한 장소까지의 이동 경로</span></figcaption>
+  </figure>
+</div>
 </div></section>
 <section class="story-section"><div class="wrap story-width"><div class="story-label">01 / WHY THIS PROJECT</div>
 <h2>먼저, 무엇이 불편하거나<br>잘못됐는지 생각했습니다.</h2>
@@ -26,7 +35,7 @@
 <article class="story-case"><div class="story-case-number">CASE 03 <span>PROBLEM → CHANGE → RESULT</span></div><h3>외부 API가 실패해도 화면이 이유 없이 비지 않도록</h3><div class="story-case-steps"><div><span>어떤 점이 문제였나</span><p>Overpass 서버 연결 문제, 브라우저 CORS 제한, API 키나 위치 권한 누락으로 검색·안내 기능이 실패할 수 있었습니다.</p></div><div><span>이렇게 바꿨습니다</span><p>Overpass 요청을 서버에서 중계하고 허용된 서버를 순차 시도하도록 했습니다. 요청 캐시와 중복 조회 합치기를 적용하고, GPS 권한이나 경로 API가 없을 때에는 가능한 기능과 실패 사유를 구분해 표시하도록 정리했습니다.</p></div><div><span>결과와 의미</span><p>외부 서비스의 불안정성을 완전히 없애지는 못하지만, 무엇이 안 되는지 알 수 있게 설계했습니다.</p></div></div></article></div></div></section>
 <section class="story-section"><div class="wrap story-width"><div class="story-label">03 / RESULTS & LEARNINGS</div>
 <h2>검증하고, 남긴 결과</h2><div class="story-result"><h3>휴식 가능 여부까지 단정하지 않았습니다</h3><p>지도 데이터의 존재가 실제 빈자리·무료 이용·개방 여부를 보장하지는 않습니다. 앱은 장소 후보와 경로를 제공하며, 상용 내비게이션 수준의 음성·백그라운드 안내는 제공하지 않습니다.</p></div>
-<figure class="story-secondary"><img src="https://raw.githubusercontent.com/youmjjang/About-me/main/assets/swieogalgot-iphone-route.jpg" loading="lazy" alt="쉬엄쉬엄 추가 실제 화면"><figcaption>선택한 장소까지의 안내 화면</figcaption></figure><div class="story-reflection"><span>WHAT I LEARNED</span><p>사용자가 보는 결과와 데이터가 실제로 보장하는 범위를 구분하는 설계가 중요했습니다.</p></div>
+<div class="story-reflection"><span>WHAT I LEARNED</span><p>사용자가 보는 결과와 데이터가 실제로 보장하는 범위를 구분하는 설계가 중요했습니다.</p></div>
 <div class="story-cta"><a class="story-button story-button-primary" href="./index.html#projects">다른 프로젝트 보기 ↗</a><a class="story-button" href="https://swieogalgot.vercel.app/" target="_blank" rel="noopener noreferrer">사이트 이용하기 ↗</a><a class="story-button" href="https://github.com/youmjjang/swieogalgot" target="_blank" rel="noopener noreferrer">GitHub 코드 보기 ↗</a></div>
 </div></section>
 </main><footer class="story-footer"><div class="wrap"><a href="./index.html">youmjjang.lab</a><a href="./index.html#projects">프로젝트 목록 ↑</a></div></footer>
