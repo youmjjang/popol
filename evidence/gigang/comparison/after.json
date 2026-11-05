@@ -1,0 +1,321 @@
+{
+  "commit": "d7255301920c8cfb2bff1a05d46694348b6d1cfc",
+  "scope": "Offline risk-classification fixtures; content matching supplied as input; memory store; notification mocked. No browser, API, DB, OCR or enforcement measurement.",
+  "cases": 20,
+  "passed": 20,
+  "tp": 10,
+  "fn": 0,
+  "fp": 0,
+  "tn": 10,
+  "rows": [
+    {
+      "id": "R01",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 77,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 1
+        }
+      }
+    },
+    {
+      "id": "R02",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 82,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "R03",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 87,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 10
+        }
+      }
+    },
+    {
+      "id": "R04",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 91,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 30
+        }
+      }
+    },
+    {
+      "id": "R05",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 69,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "email": 1
+        }
+      }
+    },
+    {
+      "id": "R06",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 74,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "phone": 3
+        }
+      }
+    },
+    {
+      "id": "R07",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 79,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "account": 3
+        }
+      }
+    },
+    {
+      "id": "R08",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 82,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "card": 3
+        }
+      }
+    },
+    {
+      "id": "R09",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 74,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "email": 3,
+          "phone": 3
+        }
+      }
+    },
+    {
+      "id": "R10",
+      "scenario": "_db_touch_noted",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 65,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {}
+      }
+    },
+    {
+      "id": "C01",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 35,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C02",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 35,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C03",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C04",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C05",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 44,
+      "pass": true,
+      "input": {
+        "text_length": 200
+      }
+    },
+    {
+      "id": "C08",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 50,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C09",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 52,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "other.example"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C10",
+      "scenario": "_db_touch_noted",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 61,
+      "pass": true,
+      "input": {
+        "pattern_hits": {
+          "rrn_high": 30
+        }
+      }
+    }
+  ]
+}
