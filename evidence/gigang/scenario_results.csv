@@ -1,0 +1,21 @@
+﻿id,scenario,expected_high,observed_high,state,event_score,pass
+R01,미승인 외부 입력 · 내용 일치 · 주민번호 1건,True,True,HIGH,77,True
+R02,미승인 외부 첨부 · 내용 일치 · 주민번호 3건,True,True,HIGH,82,True
+R03,미승인 외부 입력 · 내용 일치 · 주민번호 10건,True,True,HIGH,87,True
+R04,미승인 외부 첨부 · 내용 일치 · 주민번호 30건,True,True,HIGH,91,True
+R05,미승인 외부 입력 · 내용 일치 · 이메일 1건,True,True,HIGH,69,True
+R06,미승인 외부 첨부 · 내용 일치 · 전화번호 3건,True,True,HIGH,74,True
+R07,미승인 외부 입력 · 내용 일치 · 계좌번호 3건,True,True,HIGH,79,True
+R08,미승인 외부 첨부 · 내용 일치 · 카드번호 3건,True,True,HIGH,82,True
+R09,미승인 외부 입력 · 내용 일치 · 복합 항목,True,True,HIGH,74,True
+R10,미승인 외부 첨부 · 내용 일치 · 검사 건수 없음,True,True,HIGH,65,True
+C01,일반 외부 붙여넣기 · 연결 근거 없음,False,False,NORMAL,35,True
+C02,일반 외부 첨부 · 연결 근거 없음,False,False,NORMAL,35,True
+C03,사내 사이트 입력,False,False,NORMAL,0,True
+C04,사내 사이트 첨부,False,False,NORMAL,0,True
+C05,승인 목적지 · 내용 일치,False,False,NORMAL,0,True
+C06,승인 하위 도메인 · 내용 일치,False,False,NORMAL,0,True
+C07,복사 글자 수만 동일,False,False,WATCH,44,True
+C08,첨부 이름·크기만 동일,False,False,WATCH,50,True
+C09,내용 일치 신호의 출처가 회사 원본과 다름,False,False,WATCH,52,True
+C10,민감도 건수만 존재 · 자료 연결 없음,False,False,WATCH,61,True

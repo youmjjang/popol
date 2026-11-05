@@ -1,0 +1,321 @@
+{
+  "commit": "d7255301920c8cfb2bff1a05d46694348b6d1cfc",
+  "scope": "Offline risk-classification fixtures; content matching supplied as input; memory store; notification mocked. No browser, API, DB, OCR or enforcement measurement.",
+  "cases": 20,
+  "passed": 20,
+  "tp": 10,
+  "fn": 0,
+  "fp": 0,
+  "tn": 10,
+  "rows": [
+    {
+      "id": "R01",
+      "scenario": "미승인 외부 입력 · 내용 일치 · 주민번호 1건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 77,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 1
+        }
+      }
+    },
+    {
+      "id": "R02",
+      "scenario": "미승인 외부 첨부 · 내용 일치 · 주민번호 3건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 82,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "R03",
+      "scenario": "미승인 외부 입력 · 내용 일치 · 주민번호 10건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 87,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 10
+        }
+      }
+    },
+    {
+      "id": "R04",
+      "scenario": "미승인 외부 첨부 · 내용 일치 · 주민번호 30건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 91,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 30
+        }
+      }
+    },
+    {
+      "id": "R05",
+      "scenario": "미승인 외부 입력 · 내용 일치 · 이메일 1건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 69,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "email": 1
+        }
+      }
+    },
+    {
+      "id": "R06",
+      "scenario": "미승인 외부 첨부 · 내용 일치 · 전화번호 3건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 74,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "phone": 3
+        }
+      }
+    },
+    {
+      "id": "R07",
+      "scenario": "미승인 외부 입력 · 내용 일치 · 계좌번호 3건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 79,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "account": 3
+        }
+      }
+    },
+    {
+      "id": "R08",
+      "scenario": "미승인 외부 첨부 · 내용 일치 · 카드번호 3건",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 82,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "card": 3
+        }
+      }
+    },
+    {
+      "id": "R09",
+      "scenario": "미승인 외부 입력 · 내용 일치 · 복합 항목",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 74,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "email": 3,
+          "phone": 3
+        }
+      }
+    },
+    {
+      "id": "R10",
+      "scenario": "미승인 외부 첨부 · 내용 일치 · 검사 건수 없음",
+      "expected_high": true,
+      "observed_high": true,
+      "state": "HIGH",
+      "event_score": 65,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {}
+      }
+    },
+    {
+      "id": "C01",
+      "scenario": "일반 외부 붙여넣기 · 연결 근거 없음",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 35,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C02",
+      "scenario": "일반 외부 첨부 · 연결 근거 없음",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 35,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C03",
+      "scenario": "사내 사이트 입력",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C04",
+      "scenario": "사내 사이트 첨부",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C05",
+      "scenario": "승인 목적지 · 내용 일치",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "scenario": "승인 하위 도메인 · 내용 일치",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "NORMAL",
+      "event_score": 0,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "desktop-oli.tail2bbbea.ts.net"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "scenario": "복사 글자 수만 동일",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 44,
+      "pass": true,
+      "input": {
+        "text_length": 200
+      }
+    },
+    {
+      "id": "C08",
+      "scenario": "첨부 이름·크기만 동일",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 50,
+      "pass": true,
+      "input": {}
+    },
+    {
+      "id": "C09",
+      "scenario": "내용 일치 신호의 출처가 회사 원본과 다름",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 52,
+      "pass": true,
+      "input": {
+        "match_status": "matched",
+        "match": {
+          "source_domain": "other.example"
+        },
+        "pattern_hits": {
+          "rrn_high": 3
+        }
+      }
+    },
+    {
+      "id": "C10",
+      "scenario": "민감도 건수만 존재 · 자료 연결 없음",
+      "expected_high": false,
+      "observed_high": false,
+      "state": "WATCH",
+      "event_score": 61,
+      "pass": true,
+      "input": {
+        "pattern_hits": {
+          "rrn_high": 30
+        }
+      }
+    }
+  ]
+}
