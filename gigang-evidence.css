@@ -2,3 +2,48 @@
 .gigang-pipeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;padding:0;list-style:none;margin:30px 0}.gigang-pipeline li{padding:18px 12px;background:#f3f8fc;border:1px solid #d7e4ee;border-radius:12px}.gigang-pipeline b{display:block;color:#176b9b;font-size:16px}.gigang-pipeline span{display:block;font-size:13px;line-height:1.7;margin-top:8px}.gigang-skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.gigang-skill-grid .gigang-scope{margin:16px 0}.gigang-skill-grid h3{font-size:19px;margin:0 0 12px}.gigang-skill-grid ul{padding-left:20px;font-size:14px;line-height:1.9}@media(max-width:640px){.gigang-pipeline{grid-template-columns:1fr 1fr}.gigang-skill-grid{grid-template-columns:1fr}}
 
 .gigang-skill-grid > :only-child{grid-column:1/-1}
+
+
+/* 02 / MY TASKS: separate cards and table from the pale-blue section background */
+.story-section-alt .gigang-pipeline li{
+  background:#ffffff;
+  border-color:#d5e2f0;
+  box-shadow:0 3px 10px rgba(24,70,116,.035);
+}
+.story-section-alt .gigang-table-wrap{
+  background:#ffffff;
+  border:1px solid #cadbeb;
+  border-top:3px solid #4d96d1;
+  box-shadow:0 10px 26px rgba(43,83,127,.075);
+}
+.story-section-alt .gigang-table{
+  background:#ffffff;
+  min-width:620px;
+  table-layout:fixed;
+}
+.story-section-alt .gigang-table caption{
+  background:#ffffff;
+  color:#314f70;
+  font-weight:700;
+  padding:16px;
+}
+.story-section-alt .gigang-table thead th{
+  background:#e8f2fc;
+  color:#1c4f7e;
+  border-top:1px solid #d0e1f1;
+  border-bottom:1px solid #cbddec;
+}
+.story-section-alt .gigang-table th:first-child{width:19%}
+.story-section-alt .gigang-table th:nth-child(2){width:44%}
+.story-section-alt .gigang-table th:nth-child(3){width:37%}
+.story-section-alt .gigang-table tbody tr:nth-child(even){background:#f9fcff}
+.story-section-alt .gigang-table tbody tr:nth-child(odd){background:#ffffff}
+.story-section-alt .gigang-table td{
+  border-top:1px solid #e4edf5;
+  color:#28435e;
+  overflow-wrap:break-word;
+}
+.story-section-alt .gigang-table td:first-child{
+  color:#165c97;
+  font-weight:700;
+}
