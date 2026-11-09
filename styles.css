@@ -168,3 +168,27 @@ footer{background:#fff;border-top:1px solid #edf0f5}.footer-inner{min-height:95p
 .project:hover .photo-cover:not(.lunch-cover) img{transform:none!important}
 
 
+
+
+/* Compact HTTP analyzer preview when paired with today's luggage project */
+.project.analyzer-card .cover.analyzer{
+  height:280px;
+  min-height:280px;
+  padding:20px 24px;
+}
+.project.analyzer-card .fake-content{min-height:0;grid-template-columns:92px minmax(0,1fr)}
+.project.analyzer-card .fake-head{height:29px}
+.project.analyzer-card .fake-sidebar{padding:18px 10px;gap:14px;font-size:8px}
+.project.analyzer-card .fake-main{padding:14px 16px}
+.project.analyzer-card .fake-main h4{font-size:16px;margin:8px 0 3px}
+.project.analyzer-card .f1-chart{gap:8px;margin:15px 0 11px}
+.project.analyzer-card .f1-chart>div{gap:7px}
+@media(max-width:760px){
+  .project.analyzer-card .cover.analyzer{height:285px;min-height:285px;padding:22px 16px}
+}
+@media(max-width:410px){
+  .project.analyzer-card .fake-content{grid-template-columns:72px minmax(0,1fr)}
+  .project.analyzer-card .fake-sidebar{padding:17px 7px;gap:13px;font-size:7px}
+  .project.analyzer-card .fake-main{padding:14px 10px}
+  .project.analyzer-card .f1-chart>div{gap:5px}
+}
